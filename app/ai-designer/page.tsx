@@ -1,11 +1,10 @@
 'use client'
 
-import Link from 'next/link'
+
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Slider } from "@/components/ui/slider"
 import { ChevronRight, Loader2 } from 'lucide-react'
 import { Inter } from 'next/font/google'
 import { useState } from 'react'
@@ -28,7 +27,6 @@ export default function AIDesigner() {
         texture: false
     })
     const [isGenerating, setIsGenerating] = useState(false)
-    const [design, setDesign] = useState(null)
     const [generatedImageUrl, setGeneratedImageUrl] = useState<string | null>(null)
 
 
@@ -200,7 +198,7 @@ export default function AIDesigner() {
                                         <Switch
                                             id="stripes"
                                             checked={selectedOptions.stripes}
-                                            onCheckedChange={(checked: any) => setSelectedOptions(prev => ({ ...prev, stripes: checked }))}
+                                            onCheckedChange={(checked: boolean) => setSelectedOptions(prev => ({ ...prev, stripes: checked }))}
                                         />
                                     </div>
                                     <div className="flex items-center justify-between">
@@ -208,7 +206,7 @@ export default function AIDesigner() {
                                         <Switch
                                             id="silhouette"
                                             checked={selectedOptions.silhouette}
-                                            onCheckedChange={(checked: any) => setSelectedOptions(prev => ({ ...prev, silhouette: checked }))}
+                                            onCheckedChange={(checked: boolean) => setSelectedOptions(prev => ({ ...prev, silhouette: checked }))}
                                         />
                                     </div>
                                     <div className="flex items-center justify-between">
@@ -216,7 +214,7 @@ export default function AIDesigner() {
                                         <Switch
                                             id="texture"
                                             checked={selectedOptions.texture}
-                                            onCheckedChange={(checked: any) => setSelectedOptions(prev => ({ ...prev, texture: checked }))}
+                                            onCheckedChange={(checked: boolean) => setSelectedOptions(prev => ({ ...prev, texture: checked }))}
                                         />
                                     </div>
                                 </div>

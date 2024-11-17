@@ -61,7 +61,7 @@ export default function TeamDetailsPage() {
             setTeam(teamData)
             console.log(`${foundTeam.title.toLowerCase().replace(/\s+/g, '-')}`)
         }
-    }, [params.id])
+    }, [params])
 
     console.log('Current Team State:', team)
 
