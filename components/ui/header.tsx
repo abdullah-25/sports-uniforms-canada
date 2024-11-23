@@ -11,8 +11,8 @@ import { usePathname } from 'next/navigation'
 const navItems = [
     { name: 'Products', href: '/products' },
     { name: 'AI Designer', href: '/ai-designer' },
-    { name: 'About', href: '/about' },
     { name: 'Gallery', href: '/gallery' },
+    { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
 ]
 
