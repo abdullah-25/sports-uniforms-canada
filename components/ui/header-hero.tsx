@@ -156,7 +156,7 @@ export default function ModernHeaderHero() {
                             }}
                         >
                             <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white">
-                                Get Started
+                                Request a Quote
                                 <ChevronRight className="ml-2 h-4 w-4" />
                             </Button>
                         </Link>

@@ -10,8 +10,8 @@ export default function Home() {
     <main>
       <ModernHeaderHero />
       {/* <QuickActions /> */}
-      <InGameGallery />
       <OurProducts />
+      <InGameGallery />
       <TrustedByCarousel />
       <Testimonials />
       <AboutUs />
