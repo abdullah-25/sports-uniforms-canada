@@ -143,7 +143,7 @@ export default function ProductCarousel() {
                                                 <h3 className="font-semibold text-lg">{product.name}</h3>
                                                 <span className="text-sm text-gray-500">{product.type}</span>
                                             </div>
-                                            <p className="text-gray-600">{product.description}</p>
+                                            {/* <p className="text-gray-600">{product.description}</p> */}
                                             <Link href={`/products/${product.id}`}>
                                                 <Button className="w-full mt-2 bg-red-600 hover:bg-red-700 text-white transition-colors duration-300">
                                                     View Details
