@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Contact() {
     return (
-        <main className="flex-grow container mx-auto px-4 py-28">
+        <main className="flex-grow container mx-auto px-4 py-28 ">
             <h1 className="text-4xl font-bold mb-8 text-center">Contact Us</h1>
 
             <div className="grid gap-8 md:grid-cols-2">
@@ -45,7 +45,7 @@ export default function Contact() {
                                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
                                 <Textarea id="message" placeholder="Your message here..." rows={4} />
                             </div>
-                            <Button type="submit" className="w-full">
+                            <Button type="submit" className="w-full bg-red-600 hover:bg-red-700">
                                 Send Message
                                 <ChevronRight className="ml-2 h-4 w-4" />
                             </Button>

@@ -25,9 +25,9 @@ export default function SoccerUniformsPage() {
     }
 
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-red-50">
             {/* Introduction */}
-            <section className="py-40 container mx-auto px-4">
+            <section className="pt-40 py-10 container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -45,7 +45,7 @@ export default function SoccerUniformsPage() {
             </section>
 
             {/* Products Grid */}
-            <section className="py-16 bg-gray-50">
+            <section className="py-16 bg-gradient-to-br from-gray-50 to-red-50">
                 <div className="container mx-auto px-4">
                     <h2 className="text-3xl font-bold text-center mb-12">Our Products</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -60,7 +60,8 @@ export default function SoccerUniformsPage() {
                                     <CardContent className="p-6">
                                         <div className="aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
                                             <Image
-                                                src={`/placeholder.svg?height=300&width=300&text=${product.name}`}
+
+                                                src={"/product-carousel/aiden.jpg"}
                                                 alt={product.name}
                                                 width={300}
                                                 height={300}
@@ -68,7 +69,7 @@ export default function SoccerUniformsPage() {
                                             />
                                         </div>
                                         <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
-                                        <p className="text-gray-600">Starting from ${product.price}</p>
+                                        {/* <p className="text-gray-600">Starting from ${product.price}</p> */}
                                     </CardContent>
                                 </Card>
                             </motion.div>
@@ -78,7 +79,7 @@ export default function SoccerUniformsPage() {
             </section>
 
             {/* Customization Section */}
-            <section className="py-16">
+            <section className="py-16 bg-gradient-to-br from-gray-50 to-red-50">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-3xl font-bold text-center mb-4">Customization Options</h2>
@@ -117,7 +118,7 @@ export default function SoccerUniformsPage() {
                     <div className="max-w-xl mx-auto text-center">
                         <h2 className="text-3xl font-bold mb-8">Contact Us</h2>
                         <div className="space-y-4">
-                            <Button size="lg" className="w-full">
+                            <Button size="lg" className="w-full bg-red-600 hover:bg-red-700 text-white transition-colors duration-300">
                                 Request a Quote
                             </Button>
 

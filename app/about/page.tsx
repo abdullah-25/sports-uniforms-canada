@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function AboutUs() {
     return (
-        <div className={`flex flex-col min-h-screen ${inter.className}`}>
+        <div className={`flex flex-col min-h-screen bg-gradient-to-br from-gray-50 to-red-50 ${inter.className}`}>
 
 
             <main className="flex-grow container mx-auto px-4 py-28">
@@ -77,7 +77,7 @@ export default function AboutUs() {
 
                 <div className="mt-12 text-center">
                     <h2 className="text-2xl font-semibold mb-4">Ready to Get Started?</h2>
-                    <Button size="lg">
+                    <Button size="lg" className=" bg-red-600 hover:bg-red-700 text-white transition-colors duration-300">
                         Request a Quote
                         <ChevronRight className="ml-2 h-4 w-4" />
                     </Button>

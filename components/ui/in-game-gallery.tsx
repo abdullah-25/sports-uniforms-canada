@@ -11,7 +11,7 @@ import { motion } from 'framer-motion'
 export default function InGameGallery() {
     return (
 
-        <section className="py-20">
+        <section className="py-16 bg-gradient-to-br from-gray-50 to-red-50">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-bold mb-4">In-Game Gallery</h2>
@@ -45,7 +45,7 @@ export default function InGameGallery() {
 
                         }}
                     >
-                        <Button variant="outline" size="lg">
+                        <Button variant="outline" size="lg" className="bg-red-600 hover:bg-red-700 text-white transition-colors duration-300">
                             View Full Gallery
                             <ChevronRight className="ml-2 h-4 w-4" />
                         </Button>
