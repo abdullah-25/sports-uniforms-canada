@@ -6,6 +6,7 @@ import { useState } from 'react'
 import { Card, CardContent } from "@/components/ui/card"
 
 
+
 export default function Faq() {
     const [searchQuery, setSearchQuery] = useState('')
 
@@ -26,7 +27,7 @@ export default function Faq() {
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                             className="w-full"
-                            icon={<Search className="h-4 w-4 text-gray-500" />}
+                        // icon={<Search className="h-4 w-4 text-gray-500" />}
                         />
                     </div>
                     <Tabs defaultValue="common" className="w-full">

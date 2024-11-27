@@ -12,7 +12,7 @@ import { Camera, Play, Share2, ChevronRight } from 'lucide-react'
 const contentExamples = [
     // { type: 'image', src: '/placeholder.svg?height=600&width=800&text=Action+Shot+1', alt: 'Soccer team scoring a goal' },
     // { type: 'image', src: '/placeholder.svg?height=600&width=800&text=Action+Shot+2', alt: 'Basketball team celebrating' },
-    { type: 'video', src: '/video-feature.MOV', poster: '' },
+    { type: 'video', src: '/video-feature.MOV', alt: 'game vidoe', poster: '' },
 ]
 
 const features = [
