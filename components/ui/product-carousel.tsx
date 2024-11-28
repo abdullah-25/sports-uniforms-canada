@@ -16,6 +16,7 @@ export default function ProductCarousel() {
             id: 1,
             name: "Young Sirs",
             type: "Soccer",
+            link: '/gallery',
             // description: "Pink home jersey with custom numbering",
             image: "/product-carousel/sirs.jpg"
         },
@@ -23,6 +24,7 @@ export default function ProductCarousel() {
             id: 2,
             name: "Aiden FC",
             type: "Soccer",
+            link: '/gallery',
             // description: "Professional grade away kit design",
             image: "/product-carousel/aiden.jpg"
         },
@@ -30,6 +32,7 @@ export default function ProductCarousel() {
             id: 3,
             name: "Jelly Fam",
             type: "Basketball",
+            link: '/gallery',
             // description: "Custom designed team uniform",
             image: "/product-carousel/jelly.jpg"
         },
@@ -37,6 +40,7 @@ export default function ProductCarousel() {
             id: 4,
             name: "Dream Team",
             type: "Basketball",
+            link: '/gallery',
             // description: "Premium performance jersey",
             image: "/product-carousel/dream.jpg"
         },
@@ -44,6 +48,7 @@ export default function ProductCarousel() {
             id: 5,
             name: "Bluff Goons",
             type: "Basketball",
+            link: '/gallery',
             // description: "Professional soccer uniform",
             image: "/product-carousel/bluff.jpg"
         },
@@ -51,6 +56,7 @@ export default function ProductCarousel() {
             id: 6,
             name: "Chip Chaser",
             type: "Basketball",
+            link: '/gallery',
             // description: "Custom basketball uniform",
             image: "/product-carousel/chip.jpg"
         },
@@ -58,6 +64,7 @@ export default function ProductCarousel() {
             id: 7,
             name: "Dream Team Kit",
             type: "Basketball",
+            link: '/gallery',
             // description: "Premium basketball jersey",
             image: "/product-carousel/sirs.jpg"
         }
@@ -144,7 +151,7 @@ export default function ProductCarousel() {
                                                 <span className="text-sm text-gray-500">{product.type}</span>
                                             </div>
                                             {/* <p className="text-gray-600">{product.description}</p> */}
-                                            <Link href={`/products/${product.id}`}>
+                                            <Link href={product.link}>
                                                 <Button className="w-full mt-2 bg-red-600 hover:bg-red-700 text-white transition-colors duration-300">
                                                     View Details
                                                     <ChevronRight className="ml-2 h-4 w-4" />

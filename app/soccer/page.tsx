@@ -9,12 +9,12 @@ import { Button } from "@/components/ui/button"
 
 export default function SoccerUniformsPage() {
     const products = [
-        { name: 'Soccer Kits', price: 35 },
-        { name: 'Jerseys', price: 28 },
-        { name: 'Shorts', price: 10 },
-        { name: 'Reversible Kit', price: 32 },
-        { name: 'Reversible Jerseys', price: 35 },
-        { name: 'Reversible Shorts', price: 15 },
+        { name: 'Soccer Kits', price: 35, src: '/our-products/soccer-1.jpg' },
+        { name: 'Jerseys', price: 28, src: '/our-products/soccer-2.jpg' },
+        { name: 'Shorts', price: 10, src: '/our-products/soccer-3.jpg' },
+        { name: 'Reversible Kit', price: 32, src: '/our-products/soccer-4.jpg' },
+        { name: 'Reversible Jerseys', price: 35, src: '/our-products/soccer-5.jpg' },
+        { name: 'Reversible Shorts', price: 15, src: '/our-products/soccer-7.jpg' },
     ]
 
     const customizationData = {
@@ -23,6 +23,7 @@ export default function SoccerUniformsPage() {
         customization: ['Custom Colors and Designs', 'Player Names and Numbers', 'Team Logos and Crests', 'Sponsor Logos', 'Personalized Sizing Options'],
         addons: ['Patches', 'Labels', 'Custom Tags', 'Reflective Elements', 'Specialty Finishes (e.g., metallic, glitter)']
     }
+
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-50 to-red-50">
@@ -61,14 +62,14 @@ export default function SoccerUniformsPage() {
                                         <div className="aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
                                             <Image
 
-                                                src={"/product-carousel/aiden.jpg"}
+                                                src={product.src}
                                                 alt={product.name}
                                                 width={300}
                                                 height={300}
                                                 className="object-cover"
                                             />
                                         </div>
-                                        <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
+                                        {/* <h3 className="text-xl font-semibold mb-2">{product.name}</h3> */}
                                         {/* <p className="text-gray-600">Starting from ${product.price}</p> */}
                                     </CardContent>
                                 </Card>

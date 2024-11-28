@@ -16,14 +16,14 @@ export default function Products() {
         {
             name: "Soccer Jerseys",
             description: "High-performance, customizable soccer uniforms for teams of all levels. Our soccer jerseys are designed for comfort, durability, and style on the field.",
-            image: "/placeholder.svg?height=600&width=800&text=Soccer+Jerseys",
-            link: "/products/soccer"
+            image: "/products/soccer-display.jpg",
+            link: "/soccer"
         },
         {
             name: "Basketball Jerseys",
             description: "Premium quality basketball uniforms that combine style with functionality. Perfect for teams looking to make a statement on the court.",
-            image: "/placeholder.svg?height=600&width=800&text=Basketball+Jerseys",
-            link: "/products/basketball"
+            image: "/products/basketball-display.jpg",
+            link: "/basketball"
         }
     ]
     return (
@@ -95,10 +95,12 @@ export default function Products() {
                     <p className="text-gray-700 mb-4">
                         Have a unique design in mind? We can bring your vision to life! Upload your design ideas or describe your requirements, and our team will work with you to create the perfect custom uniforms for your team.
                     </p>
-                    <Button className=" bg-red-600 hover:bg-red-700 text-white transition-colors duration-300">
-                        Start Custom Design Request
-                        <ChevronRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    <Link href={"/contact"}>
+                        <Button className=" bg-red-600 hover:bg-red-700 text-white transition-colors duration-300">
+                            Start Custom Design Request
+                            <ChevronRight className="ml-2 h-4 w-4" />
+                        </Button>
+                    </Link>
                 </section>
             </main>
 

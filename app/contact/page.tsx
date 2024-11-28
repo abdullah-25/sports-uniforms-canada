@@ -90,9 +90,7 @@ export default function Contact() {
                             <h2 className="text-2xl font-semibold mb-4">Follow Us</h2>
                             <div className="flex space-x-4">
                                 <a href="#" className="text-red-600 hover:text-red-800">Facebook</a>
-                                <a href="#" className="text-red-600 hover:text-red-800">Twitter</a>
                                 <a href="#" className="text-red-600 hover:text-red-800">Instagram</a>
-                                <a href="#" className="text-red-600 hover:text-red-800">LinkedIn</a>
                             </div>
                         </CardContent>
                     </Card>
