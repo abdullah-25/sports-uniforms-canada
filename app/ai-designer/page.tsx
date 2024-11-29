@@ -34,6 +34,7 @@ export default function AIDesigner() {
     const generateDesign = async () => {
         setIsGenerating(true)
         setGeneratedImageUrl(null)
+        console.log(primaryColor, secondaryColor)
         try {
             const response = await fetch('/api/generate-design', {
                 method: 'POST',

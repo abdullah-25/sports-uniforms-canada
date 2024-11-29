@@ -18,28 +18,106 @@ export async function POST(request: NextRequest) {
         } = await request.json();
 
         const hexToColorName = (hex: string) => {
-            // Remove the # if present
-            hex = hex.toLowerCase().replace('#', '');
+            hex = hex.toUpperCase();
+            if (!hex.startsWith('#')) hex = '#' + hex;
 
             // Define common colors and their hex values
             const colorMap: { [key: string]: string } = {
-                '000000': 'black',
-                'ffffff': 'white',
-                'ff0000': 'red',
-                '00ff00': 'green',
-                '0000ff': 'blue',
-                'ffff00': 'yellow',
-                'ff00ff': 'magenta',
-                '00ffff': 'cyan',
-                'ffa500': 'orange',
-                '800080': 'purple',
-                'ffc0cb': 'pink',
-                '808080': 'gray',
-                'a52a2a': 'brown',
-                '008000': 'dark green',
-                '800000': 'maroon',
-                'add8e6': 'light blue',
-                // Add more colors as needed
+                // Reds
+                '#FF0000': 'pure red',
+                '#8B0000': 'dark red',
+                '#DC143C': 'crimson red',
+                '#CD5C5C': 'indian red',
+                '#FF6B6B': 'light coral red',
+                '#B22222': 'firebrick red',
+                '#800000': 'maroon',
+                '#A52A2A': 'brown red',
+                '#FF4500': 'orange red',
+                '#FF6347': 'tomato red',
+
+                // Greens
+                '#228B22': 'forest green',
+                '#006400': 'deep green',
+                '#32CD32': 'lime green',
+                '#008000': 'pure green',
+                '#355E3B': 'hunter green',
+                '#2E8B57': 'sea green',
+                '#3CB371': 'medium sea green',
+                '#90EE90': 'light green',
+                '#98FB98': 'pale green',
+                '#00FF00': 'neon green',
+
+                // Blues
+                '#0000FF': 'pure blue',
+                '#00008B': 'dark blue',
+                '#4169E1': 'royal blue',
+                '#1E90FF': 'dodger blue',
+                '#87CEEB': 'sky blue',
+                '#000080': 'navy blue',
+                '#0047AB': 'cobalt blue',
+                '#5F9EA0': 'cadet blue',
+                '#6495ED': 'cornflower blue',
+                '#7B68EE': 'medium slate blue',
+
+                // Purples
+                '#800080': 'pure purple',
+                '#4B0082': 'indigo',
+                '#8B008B': 'dark magenta',
+                '#9400D3': 'dark violet',
+                '#9932CC': 'dark orchid',
+                '#BA55D3': 'medium orchid',
+                '#DDA0DD': 'plum',
+                '#EE82EE': 'violet',
+                '#FF00FF': 'magenta',
+                '#DA70D6': 'orchid',
+
+                // Yellows
+                '#FFFF00': 'pure yellow',
+                '#FFD700': 'gold',
+                '#FFA500': 'orange',
+                '#DAA520': 'goldenrod',
+                '#F0E68C': 'khaki',
+                '#BDB76B': 'dark khaki',
+                '#FFDAB9': 'peach',
+                '#FFE4B5': 'moccasin',
+                '#FFEFD5': 'papaya whip',
+                '#FFFACD': 'lemon chiffon',
+
+                // Grays
+                '#808080': 'gray',
+                '#A9A9A9': 'dark gray',
+                '#D3D3D3': 'light gray',
+                '#696969': 'dim gray',
+                '#778899': 'light slate gray',
+                '#708090': 'slate gray',
+                '#C0C0C0': 'silver',
+                '#DCDCDC': 'gainsboro',
+                '#F5F5F5': 'white smoke',
+                '#2F4F4F': 'dark slate gray',
+
+                // Browns
+                '#8B4513': 'saddle brown',
+                '#A0522D': 'sienna',
+                '#D2691E': 'chocolate',
+                '#CD853F': 'peru',
+                '#DEB887': 'burlywood',
+                '#F4A460': 'sandy brown',
+                '#B8860B': 'dark goldenrod',
+                '#D2B48C': 'tan',
+                '#BC8F8F': 'rosy brown',
+
+                // Whites
+                '#FFFFFF': 'pure white',
+                '#FFFAFA': 'snow white',
+                '#F0FFF0': 'honeydew',
+                '#F5FFFA': 'mint cream',
+                '#F0FFFF': 'azure',
+                '#F5F5DC': 'beige',
+                '#FFF8DC': 'cornsilk',
+                '#FFFFF0': 'ivory',
+                '#FAFAD2': 'light goldenrod',
+                '#FAF0E6': 'linen'
+
             };
 
             // Find exact match
@@ -48,20 +126,18 @@ export async function POST(request: NextRequest) {
             }
 
             // If no exact match, convert to RGB to find closest color
-            const r = parseInt(hex.substring(0, 2), 16);
-            const g = parseInt(hex.substring(2, 4), 16);
-            const b = parseInt(hex.substring(4, 6), 16);
+            const r = parseInt(hex.slice(1, 3), 16);
+            const g = parseInt(hex.slice(3, 5), 16);
+            const b = parseInt(hex.slice(5, 7), 16);
 
-            // Convert all hex colors in colorMap to RGB for comparison
             let closestColor = '';
             let minDistance = Infinity;
 
             Object.entries(colorMap).forEach(([hexValue, colorName]) => {
-                const r2 = parseInt(hexValue.substring(0, 2), 16);
-                const g2 = parseInt(hexValue.substring(2, 4), 16);
-                const b2 = parseInt(hexValue.substring(4, 6), 16);
+                const r2 = parseInt(hexValue.slice(1, 3), 16);
+                const g2 = parseInt(hexValue.slice(3, 5), 16);
+                const b2 = parseInt(hexValue.slice(5, 7), 16);
 
-                // Calculate color distance using simple Euclidean distance
                 const distance = Math.sqrt(
                     Math.pow(r - r2, 2) +
                     Math.pow(g - g2, 2) +
@@ -78,7 +154,7 @@ export async function POST(request: NextRequest) {
         };
 
         // Construct the prompt using hex colors directly
-        const detailedPrompt = `Generate a modern ${sport} jersey design with ${hexToColorName(primaryColor)} as primary color and ${hexToColorName(secondaryColor)} as secondary color o the jersey, The shirt should have a ${selectedLook} look with ${selectedPattern} pattern. ${selectedOptions.stripes ? 'Add subtle stripes to enhance dynamic feel. ' : ''} ${selectedOptions.silhouette ? 'Add subtle silhouette design to enhance dynamic feel. ' : ''} ${selectedOptions.texture ? 'Add subtle texture to enhance dynamic feel ' : ''}The overall style should evoke ${selectedFeel}`;
+        const detailedPrompt = `Generate a modern ${sport} jersey design with ${hexToColorName(primaryColor)} as primary color and ${hexToColorName(secondaryColor)} as secondary color of the jersey, The shirt should have a ${selectedLook} look with ${selectedPattern} pattern. ${selectedOptions.stripes ? 'Add subtle stripes to enhance dynamic feel. ' : ''} ${selectedOptions.silhouette ? 'Add subtle silhouette design to enhance dynamic feel. ' : ''} ${selectedOptions.texture ? 'Add subtle texture to enhance dynamic feel ' : ''}The overall style should evoke ${selectedFeel}`;
 
 
 
