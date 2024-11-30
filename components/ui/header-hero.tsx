@@ -78,10 +78,10 @@ export default function ModernHeaderHero() {
                 <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
                     <Link href="/" className="text-2xl font-bold text-white">
                         <Image
-                            src='/thumbnail_IMG_1937-removebg-preview.png'
+                            src='/logo.png'
                             alt="Sports Uniforms Canada"
-                            width={50}
-                            height={50}
+                            width={60}
+                            height={60}
                             priority
                         />
                     </Link>
@@ -99,7 +99,7 @@ export default function ModernHeaderHero() {
                     <Button
                         variant="outline"
                         size="icon"
-                        className="md:hidden text-white border-white hover:bg-white hover:text-black"
+                        className="md:hidden text-black border-white hover:bg-white hover:text-black"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
                         <span className="sr-only">Toggle menu</span>
