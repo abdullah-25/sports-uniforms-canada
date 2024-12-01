@@ -76,11 +76,9 @@ interface OpenQuestions {
     [key: number]: boolean;
 }
 
-
 export default function Faq() {
     const [searchQuery, setSearchQuery] = useState('')
     const [selectedCategory, setSelectedCategory] = useState('all')
-
     const [openQuestions, setOpenQuestions] = useState<Record<number, boolean>>({});
 
     const toggleQuestion = (index: number) => {
@@ -100,7 +98,7 @@ export default function Faq() {
     return (
         <section className="py-16 bg-gray-50">
             <div className="container mx-auto px-4">
-                <h2 className="text-4xl font-bold text-center mb-4 font-sports">Frequently Asked Questions</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 font-sports">Frequently Asked Questions</h2>
                 <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
                     Find answers to common questions about our custom sports uniforms, ordering process, and more.
                 </p>
@@ -113,27 +111,27 @@ export default function Faq() {
                             placeholder="Search FAQs..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="pl-10 py-6"
+                            className="pl-10 py-3 md:py-6"
                         />
                     </div>
 
                     <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
-                        <TabsList className="grid w-full grid-cols-3 lg:grid-cols-5 mb-8">
-                            <TabsTrigger value="all">All</TabsTrigger>
+                        <TabsList className="flex flex-wrap gap-2 ">
+                            <TabsTrigger value="all" className="flex-1 min-w-24" >All</TabsTrigger>
                             {Object.entries(faqCategories).map(([key, label]) => (
-                                <TabsTrigger key={key} value={key}>{label}</TabsTrigger>
+                                <TabsTrigger key={key} value={key} className="flex-1 min-w-24" >{label}</TabsTrigger>
                             ))}
                         </TabsList>
 
-                        <div className="space-y-4">
+                        <div className="space-y-4 mt-8 md:mt-12">
                             {filteredFaqs.map((faq, index) => (
                                 <Card key={index} className="border-0 shadow-sm">
                                     <CardContent className="p-0">
                                         <button
                                             onClick={() => toggleQuestion(index)}
-                                            className="w-full text-left px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                                            className="w-full text-left px-4 py-3 md:px-6 md:py-4 flex items-center justify-between hover:bg-gray-50 transition-colors text-sm md:text-base"
                                         >
-                                            <h3 className="font-semibold pr-8">{faq.question}</h3>
+                                            <h3 className="font-semibold pr-4 md:pr-8">{faq.question}</h3>
                                             <ChevronDown
                                                 className={cn(
                                                     "h-5 w-5 text-gray-500 transition-transform",
@@ -142,7 +140,7 @@ export default function Faq() {
                                             />
                                         </button>
                                         {openQuestions[index] && (
-                                            <div className="px-6 pb-4 pt-2 text-gray-600">
+                                            <div className="px-6 pb-4 pt-2 text-gray-600 text-sm md:text-base">
                                                 {faq.answer}
                                             </div>
                                         )}
