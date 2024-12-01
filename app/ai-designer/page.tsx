@@ -10,6 +10,9 @@ import { Inter } from 'next/font/google'
 import { useState } from 'react'
 import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
+import { motion } from 'framer-motion'
+
+import { Badge } from "@/components/ui/badge"
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -112,7 +115,22 @@ export default function AIDesigner() {
 
 
             <main className="flex-grow container mx-auto px-4 py-28">
-                <h1 className="text-4xl font-bold mb-8 text-center">AI Jersey Designer</h1>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    <Badge className="bg-red-600/10 text-red-600 hover:bg-red-600/20 mb-4">
+                        AI-Powered Design
+                    </Badge>
+                    {/* <h1 className="text-4xl md:text-5xl font-bold mb-16 text-black">
+                        Design Your Dream Jersey with AI
+                    </h1> */}
+                    {/* <p className="text-lg text-black-300 mb-8 ">
+                        Create unique, professional-quality jerseys in minutes. Our AI understands your preferences
+                        and generates designs that match your team's identity.
+                    </p> */}
+                </motion.div>
 
                 <div className="grid gap-8 md:grid-cols-2">
                     <Card>

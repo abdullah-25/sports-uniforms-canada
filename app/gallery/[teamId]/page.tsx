@@ -38,11 +38,11 @@ export default function TeamDetailsPage() {
     const [team, setTeam] = useState<TeamData | null>(null)
 
     useEffect(() => {
-        console.log('Params:', params)
+
         const teamId = parseInt(params.teamId as string, 10)
-        console.log('Team ID:', teamId)
+
         const foundTeam = galleryItems.find(item => item.id === teamId)
-        console.log('Found Team:', foundTeam)
+
         if (foundTeam) {
             const teamData: TeamData = {
                 id: foundTeam.id,
@@ -51,8 +51,8 @@ export default function TeamDetailsPage() {
                 year: foundTeam.year,
                 mainImage: foundTeam.image,
                 gallery: [
-                    foundTeam.image,
-                    ...Array(3).fill(null).map((_, index) =>
+
+                    ...Array(4).fill(null).map((_, index) =>
                         `/teams/${foundTeam.title.toLowerCase().replace(/\s+/g, '-')}/image${index + 1}.jpg`
                     )
                 ]

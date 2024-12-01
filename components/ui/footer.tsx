@@ -25,8 +25,8 @@ export default function Footer() {
                         </div>
                         <div>
                             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-                            <p className="text-sm text-gray-400 mb-2">Email: info@sportsuniformscanada.com</p>
-                            <p className="text-sm text-gray-400">Phone: (123) 456-7890</p>
+                            <p className="text-sm text-gray-400 mb-2">Email: sportsuniformscanada@gmail.com</p>
+                            <p className="text-sm text-gray-400">Phone: 647-677-5465</p>
                         </div>
                     </div>
                     <div className="border-t border-gray-800 mt-8 pt-8 text-center">

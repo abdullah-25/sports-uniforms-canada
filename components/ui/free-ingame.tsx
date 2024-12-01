@@ -45,7 +45,7 @@ export default function FreeInGameContent() {
     }, [])
 
     return (
-        <section id="free-content-section" className="py-16 bg-gradient-to-br from-gray-50 to-red-50">
+        <section id="free-content-section" className="py-8 bg-gradient-to-br from-gray-50 to-red-50">
 
             <div className="container mx-auto px-4">
                 <motion.div

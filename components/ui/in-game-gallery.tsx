@@ -11,7 +11,7 @@ import { motion } from 'framer-motion'
 export default function InGameGallery() {
     return (
 
-        <section className="py-16 bg-gradient-to-br from-gray-50 to-red-50">
+        <section className="py-8 bg-gradient-to-br from-gray-50 to-red-50">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-bold mb-4">Gallery</h2>
@@ -31,8 +31,8 @@ export default function InGameGallery() {
                             <Image
                                 src={`/gallery/game-${image}.jpg`}
                                 alt={`In-game photo ${image}`}
-                                width={300}
-                                height={400}
+                                width={400}
+                                height={450}
                                 className="w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-110"
                             />
                         </motion.div>

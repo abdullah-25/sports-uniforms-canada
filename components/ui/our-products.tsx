@@ -30,16 +30,16 @@ const reviews = [
     { name: "Raptors 905", rating: 5, text: "The jerseys exceeded our expectations. Great customer service too!" },
 ]
 
-const trustLogos = [
-    { name: "Canadian Soccer Association", logo: "/placeholder.svg?height=50&width=100&text=CSA+Logo" },
-    { name: "Basketball Canada", logo: "/placeholder.svg?height=50&width=100&text=BC+Logo" },
-]
+// const trustLogos = [
+//     { name: "Canadian Soccer Association", logo: "/placeholder.svg?height=50&width=100&text=CSA+Logo" },
+//     { name: "Basketball Canada", logo: "/placeholder.svg?height=50&width=100&text=BC+Logo" },
+// ]
 
 export default function OurProductsSection() {
     const [hoveredProduct, setHoveredProduct] = useState<string | null>(null)
 
     return (
-        <section className="py-16 bg-gradient-to-br from-gray-50 to-red-50">
+        <section className="py-8 bg-gradient-to-br from-gray-50 to-red-50">
             <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

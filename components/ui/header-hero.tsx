@@ -30,14 +30,14 @@ const heroImages = [
         description: "Custom uniforms for champions",
     },
     {
-        src: "/secondHero.jpg?height=1080&width=1920",
+        src: "/secondHero.jpg",
         alt: "Basketball team on court",
         title: "Stand Out on the Court",
         description: "Performance meets style",
     },
     {
         src: "/thirdHero.jpg",
-        alt: "Soccer team celebrating",
+        alt: "Basketball team celebrating",
         title: "Unite in Victory",
         description: "Quality uniforms, delivered",
     },

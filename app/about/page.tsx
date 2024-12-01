@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ChevronRight } from 'lucide-react'
 import { Inter } from 'next/font/google'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,12 +14,12 @@ export default function AboutUs() {
 
 
             <main className="flex-grow container mx-auto px-4 py-28">
-                <h1 className="text-4xl font-bold mb-8 text-center">About Sports Uniforms Canada</h1>
+                <h1 className="text-4xl font-bold mb-8 text-center"></h1>
 
                 <div className="grid gap-8 md:grid-cols-2">
                     <div>
                         <Image
-                            src="/placeholder.svg?height=400&width=600&text=Team Photo"
+                            src="/about.jpg"
                             alt="Sports Uniforms Canada Team"
                             width={600}
                             height={400}
@@ -28,10 +29,10 @@ export default function AboutUs() {
                     <div className="space-y-4">
                         <h2 className="text-2xl font-semibold">Our Story</h2>
                         <p className="text-gray-700">
-                            Founded in 2010, Sports Uniforms Canada has been dedicated to providing high-quality, customizable uniforms for teams across the nation. Our journey began with a simple goal: to offer Canadian sports teams the best uniforms possible, combining style, comfort, and durability.
+                            Founded in 2024, Sports Uniforms Canada has quickly become a go-to provider of premium, customizable uniforms for sports teams. What started as a new venture has rapidly grown thanks to our unbeatable combination of top-notch quality and competitive pricing.
                         </p>
                         <p className="text-gray-700">
-                            Over the years, we've grown from a small local business to a nationwide provider, serving thousands of teams across various sports. Our commitment to quality and customer satisfaction has remained unwavering throughout our growth.
+                            Serving numerous happy clients in the GTA, we take pride in offering uniforms that not only look great but also provide comfort and durability. Our commitment to excellence continues as we expand and deliver standout uniforms to even more teams across the region.
                         </p>
                     </div>
                 </div>
@@ -77,10 +78,12 @@ export default function AboutUs() {
 
                 <div className="mt-12 text-center">
                     <h2 className="text-2xl font-semibold mb-4">Ready to Get Started?</h2>
-                    <Button size="lg" className=" bg-red-600 hover:bg-red-700 text-white transition-colors duration-300">
-                        Request a Quote
-                        <ChevronRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    <Link href='/contact'>
+                        <Button size="lg" className=" bg-red-600 hover:bg-red-700 text-white transition-colors duration-300">
+                            Request a Quote
+                            <ChevronRight className="ml-2 h-4 w-4" />
+                        </Button>
+                    </Link>
                 </div>
             </main>
 

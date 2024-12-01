@@ -60,11 +60,11 @@ export default function Contact() {
                             <div className="space-y-4">
                                 <div className="flex items-center">
                                     <Mail className="h-5 w-5 mr-2 text-red-600" />
-                                    <span>info@sportsuniformscanada.com</span>
+                                    <span>sportsuniformscanada@gmail.com</span>
                                 </div>
                                 <div className="flex items-center">
                                     <Phone className="h-5 w-5 mr-2 text-red-600" />
-                                    <span>(123) 456-7890</span>
+                                    <span>647-677-5465</span>
                                 </div>
                                 <div className="flex items-center">
                                     <MapPin className="h-5 w-5 mr-2 text-red-600" />
@@ -89,8 +89,8 @@ export default function Contact() {
                         <CardContent className="p-6">
                             <h2 className="text-2xl font-semibold mb-4">Follow Us</h2>
                             <div className="flex space-x-4">
-                                <a href="#" className="text-red-600 hover:text-red-800">Facebook</a>
-                                <a href="#" className="text-red-600 hover:text-red-800">Instagram</a>
+                                {/* <a href="#" className="text-red-600 hover:text-red-800">Facebook</a> */}
+                                <a href="https://www.instagram.com/sportsuniformscanada/" className="text-red-600 hover:text-red-800">Instagram</a>
                             </div>
                         </CardContent>
                     </Card>
