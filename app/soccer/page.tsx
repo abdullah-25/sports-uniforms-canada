@@ -59,7 +59,7 @@ export default function SoccerUniformsPage() {
                             >
                                 <Card className="h-full">
                                     <CardContent className="p-6">
-                                        <div className="aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                                        <div className="aspect-square  rounded-lg mb-4 flex items-center justify-center">
                                             <Image
 
                                                 src={product.src}

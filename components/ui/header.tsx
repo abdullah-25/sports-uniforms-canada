@@ -66,7 +66,7 @@ export default function Header() {
                     <Button
                         variant="outline"
                         size="icon"
-                        className="md:hidden text-white border-white hover:bg-white hover:text-black"
+                        className="md:hidden text-black border-white hover:bg-white hover:text-black"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
                         <span className="sr-only">Toggle menu</span>

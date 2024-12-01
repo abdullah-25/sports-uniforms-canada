@@ -2,9 +2,11 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { Label } from "@/components/ui/label"
 import { ChevronRight } from 'lucide-react'
 import { Inter } from 'next/font/google'
 import { useState } from 'react'
@@ -33,68 +35,127 @@ export default function Gallery() {
     )
 
     return (
-        <div className={`flex flex-col min-h-screen  bg-gradient-to-br from-gray-50 to-red-50 ${inter.className}`}>
+        <div className={`flex flex-col min-h-screen bg-gradient-to-br from-gray-50 to-red-50 ${inter.className}`}>
             <main className="flex-grow container mx-auto px-4 py-28">
-                <h1 className="text-4xl font-bold mb-8 text-center">In-Game Gallery</h1>
+                <motion.h1
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-4xl font-bold mb-12 text-center"
+                >
+                    Gallery
+                </motion.h1>
 
-                <div className="mb-8 flex flex-col sm:flex-row gap-4 justify-center">
-                    <Select value={sport} onValueChange={setSport}>
-                        <SelectTrigger className="w-[180px]">
-                            <SelectValue placeholder="Select Sport" />
-                        </SelectTrigger>
-                        <SelectContent>
-                            <SelectItem value="all">All Sports</SelectItem>
-                            <SelectItem value="soccer">Soccer</SelectItem>
-                            <SelectItem value="basketball">Basketball</SelectItem>
-                        </SelectContent>
-                    </Select>
-                    <Select value={year} onValueChange={setYear}>
-                        <SelectTrigger className="w-[180px]">
-                            <SelectValue placeholder="Select Year" />
-                        </SelectTrigger>
-                        <SelectContent>
-                            <SelectItem value="all">All Years</SelectItem>
-                            <SelectItem value="2024">2024</SelectItem>
-                            <SelectItem value="2025">2025</SelectItem>
-                        </SelectContent>
-                    </Select>
-                </div>
+                <Card className="mb-12 p-6 bg-white/50 backdrop-blur-sm">
+                    <div className="flex flex-col md:flex-row md:items-center gap-8 justify-center">
+                        <div className="space-y-3">
+                            <h2 className="text-sm font-medium text-gray-500 uppercase tracking-wide">Sport</h2>
+                            <RadioGroup
+                                value={sport}
+                                onValueChange={setSport}
+                                className="flex gap-6"
+                            >
+                                {['all', 'soccer', 'basketball'].map((value) => (
+                                    <div key={value} className="flex items-center space-x-2">
+                                        <RadioGroupItem value={value} id={`sport-${value}`} />
+                                        <Label
+                                            htmlFor={`sport-${value}`}
+                                            className="capitalize cursor-pointer"
+                                        >
+                                            {value === 'all' ? 'All Sports' : value}
+                                        </Label>
+                                    </div>
+                                ))}
+                            </RadioGroup>
+                        </div>
 
-                <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                    {filteredItems.map((item) => (
-                        <Card key={item.id} className="overflow-hidden">
-                            <Image
-                                src={item.image}
-                                alt={item.title}
-                                width={400}
-                                height={300}
-                                className="w-full h-48 object-cover"
-                            />
-                            <CardContent className="p-4">
-                                <h2 className="text-xl font-semibold mb-2">{item.title}</h2>
-                                <p className="text-gray-600 mb-4">{item.sport.charAt(0).toUpperCase() + item.sport.slice(1)} - {item.year}</p>
-                                <Link href={`/gallery/${item.id}`} passHref>
-                                    <Button variant="outline" className="w-full">
-                                        View Details
-                                        <ChevronRight className="ml-2 h-4 w-4" />
-                                    </Button>
-                                </Link>
-                            </CardContent>
-                        </Card>
+                        <div className="w-px h-8 bg-gray-200 hidden md:block" />
+
+                        <div className="space-y-3">
+                            <h2 className="text-sm font-medium text-gray-500 uppercase tracking-wide">Year</h2>
+                            <RadioGroup
+                                value={year}
+                                onValueChange={setYear}
+                                className="flex gap-6"
+                            >
+                                {['all', '2024'].map((value) => (
+                                    <div key={value} className="flex items-center space-x-2">
+                                        <RadioGroupItem value={value} id={`year-${value}`} />
+                                        <Label
+                                            htmlFor={`year-${value}`}
+                                            className="capitalize cursor-pointer"
+                                        >
+                                            {value === 'all' ? 'All Years' : value}
+                                        </Label>
+                                    </div>
+                                ))}
+                            </RadioGroup>
+                        </div>
+                    </div>
+                </Card>
+
+                <motion.div
+                    className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.2 }}
+                >
+                    {filteredItems.map((item, index) => (
+                        <motion.div
+                            key={item.id}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: index * 0.1 }}
+                        >
+                            <Card className="overflow-hidden group hover:shadow-lg transition-shadow duration-300">
+                                <div className="relative">
+                                    <Image
+                                        src={item.image}
+                                        alt={item.title}
+                                        width={400}
+                                        height={300}
+                                        className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                                    />
+                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                                </div>
+                                <CardContent className="p-4">
+                                    <h2 className="text-xl font-semibold mb-2">{item.title}</h2>
+                                    <p className="text-gray-600 mb-4">
+                                        {item.sport.charAt(0).toUpperCase() + item.sport.slice(1)} - {item.year}
+                                    </p>
+                                    <Link href={`/gallery/${item.id}`}>
+                                        <Button
+                                            variant="outline"
+                                            className="w-full group-hover:bg-red-600 group-hover:text-white group-hover:border-red-600 transition-colors duration-300"
+                                        >
+                                            View Details
+                                            <ChevronRight className="ml-2 h-4 w-4" />
+                                        </Button>
+                                    </Link>
+                                </CardContent>
+                            </Card>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
 
                 {filteredItems.length === 0 && (
                     <p className="text-center text-gray-500 mt-8">No gallery items found for the selected filters.</p>
                 )}
 
-                <div className="mt-12 text-center">
+                <motion.div
+                    className="mt-16 text-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                >
                     <h2 className="text-2xl font-semibold mb-4">Want to see your team in our gallery?</h2>
-                    <Button size="lg" className="bg-red-600 hover:bg-red-700">
+                    <Button
+                        size="lg"
+                        className="bg-red-600 hover:bg-red-700 transition-colors duration-300"
+                    >
                         Order Your Uniforms Now
                         <ChevronRight className="ml-2 h-4 w-4" />
                     </Button>
-                </div>
+                </motion.div>
             </main>
         </div>
     )

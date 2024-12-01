@@ -9,12 +9,15 @@ import { Button } from "@/components/ui/button"
 
 export default function BasketballUniformsPage() {
     const products = [
-        { name: 'Basketball Kit', price: 35 },
-        { name: 'Jerseys', price: 28 },
-        { name: 'Shorts', price: 10 },
-        { name: 'Reversible Kit', price: 50 },
-        { name: 'Reversible Jersey', price: 35 },
-        { name: 'Reversible Shorts', price: 15 },
+        { name: 'basketball Kits', price: 35, src: '/our-products/basketball-1.jpg' },
+        { name: 'Jerseys', price: 28, src: '/our-products/basketball-2.jpg' },
+        { name: 'Shorts', price: 10, src: '/our-products/basketball-3.jpg' },
+        { name: 'Reversible Kit', price: 32, src: '/our-products/basketball-4.jpg' },
+        { name: 'Reversible Jerseys', price: 35, src: '/our-products/basketball-5.jpg' },
+        { name: 'Reversible Shorts', price: 15, src: '/our-products/basketball-6.jpg' },
+        { name: 'Reversibles Kit', price: 32, src: '/our-products/basketball-7.jpg' },
+        { name: 'Reversibles Jerseys', price: 35, src: '/our-products/basketball-8.jpg' },
+        { name: 'Reversibles Shorts', price: 15, src: '/our-products/basketball-9.jpg' },
     ]
 
     const customizationData = {
@@ -55,16 +58,16 @@ export default function BasketballUniformsPage() {
                             >
                                 <Card className="h-full">
                                     <CardContent className="p-6">
-                                        <div className="aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                                        <div className="aspect-square  rounded-lg mb-4 flex items-center justify-center">
                                             <Image
-                                                src="/product-carousel/jelly.jpg"
+                                                src={product.src}
                                                 alt={product.name}
                                                 width={300}
                                                 height={300}
                                                 className="object-cover"
                                             />
                                         </div>
-                                        <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
+                                        {/* <h3 className="text-xl font-semibold mb-2">{product.name}</h3> */}
                                         {/* <p className="text-gray-600">Starting from ${product.price}</p> */}
                                     </CardContent>
                                 </Card>

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { config, subscribe } from '@fal-ai/serverless-client';
+import { GetColorName } from 'hex-color-to-color-name';
 
 config({
     credentials: process.env.FAL_KEY,
@@ -116,7 +117,10 @@ export async function POST(request: NextRequest) {
                 '#FFF8DC': 'cornsilk',
                 '#FFFFF0': 'ivory',
                 '#FAFAD2': 'light goldenrod',
-                '#FAF0E6': 'linen'
+                '#FAF0E6': 'linen',
+
+                // Black
+                '#000000': 'black'
 
             };
 
@@ -154,7 +158,28 @@ export async function POST(request: NextRequest) {
         };
 
         // Construct the prompt using hex colors directly
-        const detailedPrompt = `Generate a modern ${sport} jersey design with ${hexToColorName(primaryColor)} as primary color and ${hexToColorName(secondaryColor)} as secondary color of the jersey, The shirt should have a ${selectedLook} look with ${selectedPattern} pattern. ${selectedOptions.stripes ? 'Add subtle stripes to enhance dynamic feel. ' : ''} ${selectedOptions.silhouette ? 'Add subtle silhouette design to enhance dynamic feel. ' : ''} ${selectedOptions.texture ? 'Add subtle texture to enhance dynamic feel ' : ''}The overall style should evoke ${selectedFeel}`;
+        const detailedPrompt = `Design a modern ${sport} jersey using these exact colors:
+PRIMARY COLOR: ${primaryColor} (${hexToColorName(primaryColor)})
+SECONDARY COLOR: ${secondaryColor} (${hexToColorName(secondaryColor)})
+
+Key Instructions:
+- The main body MUST be colored #${primaryColor}
+- All trim and accents MUST be colored #${secondaryColor}
+
+Design Elements:
+- ${selectedLook} silhouette with professional appearance
+${selectedPattern !== 'minimalistic' ? `- ${selectedPattern} pattern integrated into the design` : '- Clean, minimalistic design'}
+${selectedOptions.stripes ? '- Subtle accent stripes' : ''}
+${selectedOptions.silhouette ? '- Contoured design elements' : ''}
+${selectedOptions.texture ? '- Subtle performance fabric texture' : ''}
+
+Technical Specifications:
+- Performance athletic cut
+- Strategic color placement
+${sport === 'basketball' ? '- Basketball-specific shoulder cut' : ''}
+${sport === 'soccer' ? '- Soccer-specific sleeve design' : ''}
+
+Style Focus: ${selectedFeel}`
 
 
 

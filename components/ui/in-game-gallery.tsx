@@ -14,7 +14,7 @@ export default function InGameGallery() {
         <section className="py-16 bg-gradient-to-br from-gray-50 to-red-50">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold mb-4">In-Game Gallery</h2>
+                    <h2 className="text-3xl font-bold mb-4">Gallery</h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
                         See our uniforms in action. Browse through our gallery of teams wearing our custom-designed uniforms.
                     </p>
