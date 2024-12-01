@@ -6,10 +6,41 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { ChevronRight, Mail, Phone, MapPin } from 'lucide-react'
 import { Inter } from 'next/font/google'
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Contact() {
+    const formRef = useRef<HTMLFormElement>(null);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitStatus('idle');
+
+        try {
+            await emailjs.sendForm(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+                formRef.current!,
+                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+            );
+
+            setSubmitStatus('success');
+            if (formRef.current) {
+                formRef.current.reset();
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            setSubmitStatus('error');
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     return (
         <main className="flex-grow container mx-auto px-4 py-28 ">
             <h1 className="text-4xl font-bold mb-8 text-center">Contact Us</h1>
@@ -18,18 +49,28 @@ export default function Contact() {
                 <Card>
                     <CardContent className="p-6">
                         <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
-                        <form className="space-y-4">
+                        {submitStatus === 'success' && (
+                            <div className="mb-4 p-4 bg-green-50 text-green-700 rounded-md">
+                                Thank you! We'll get back to you soon.
+                            </div>
+                        )}
+                        {submitStatus === 'error' && (
+                            <div className="mb-4 p-4 bg-red-50 text-red-700 rounded-md">
+                                Something went wrong. Please try again.
+                            </div>
+                        )}
+                        <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                                <Input id="name" placeholder="Your Name" />
+                                <Input name="user_name" id="name" placeholder="Your Name" required />
                             </div>
                             <div>
                                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                                <Input id="email" type="email" placeholder="your@email.com" />
+                                <Input name="user_email" id="email" type="email" placeholder="your@email.com" required />
                             </div>
                             <div>
                                 <label htmlFor="inquiry-type" className="block text-sm font-medium text-gray-700 mb-1">Inquiry Type</label>
-                                <Select>
+                                <Select name="inquiry_type" required>
                                     <SelectTrigger id="inquiry-type">
                                         <SelectValue placeholder="Select inquiry type" />
                                     </SelectTrigger>
@@ -43,10 +84,14 @@ export default function Contact() {
                             </div>
                             <div>
                                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                                <Textarea id="message" placeholder="Your message here..." rows={4} />
+                                <Textarea name="message" id="message" placeholder="Your message here..." rows={4} required />
                             </div>
-                            <Button type="submit" className="w-full bg-red-600 hover:bg-red-700">
-                                Send Message
+                            <Button
+                                type="submit"
+                                className="w-full bg-red-600 hover:bg-red-700"
+                                disabled={isSubmitting}
+                            >
+                                {isSubmitting ? 'Sending...' : 'Send Message'}
                                 <ChevronRight className="ml-2 h-4 w-4" />
                             </Button>
                         </form>

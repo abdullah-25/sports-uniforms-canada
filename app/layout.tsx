@@ -3,12 +3,14 @@ import "./globals.css";
 import Header from "@/components/ui/header"
 import Footer from "@/components/ui/footer"
 import { Inter } from 'next/font/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-inter',
 })
+
 
 export const metadata: Metadata = {
   title: "Sports Uniforms Canada",
@@ -23,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} font-sans antialiased`}>
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
         <Header />
         <main className="flex-grow">
           {children}
