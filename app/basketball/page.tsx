@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { Card, CardContent } from "@/components/ui/card"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Button } from "@/components/ui/button"
+import Link from 'next/link'
 
 
 export default function BasketballUniformsPage() {
@@ -117,9 +118,11 @@ export default function BasketballUniformsPage() {
                     <div className="max-w-xl mx-auto text-center">
                         <h2 className="text-3xl font-bold mb-8">Contact Us</h2>
                         <div className="space-y-4">
-                            <Button size="lg" className="w-full bg-red-600 hover:bg-red-700 text-white transition-colors duration-300">
-                                Request a Quote
-                            </Button>
+                            <Link href="/contact">
+                                <Button size="lg" className="w-full bg-red-600 hover:bg-red-700 text-white transition-colors duration-300">
+                                    Request a Quote
+                                </Button>
+                            </Link>
 
                         </div>
                     </div>
