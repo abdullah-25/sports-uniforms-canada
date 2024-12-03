@@ -11,26 +11,39 @@ import { useState } from 'react'
 import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
 import { motion } from 'framer-motion'
-
+import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
+import { Lightbulb, Wand2 } from 'lucide-react'
 
 
 const inter = Inter({ subsets: ['latin'] })
+const examplePrompts = [
+    {
+        title: "Modern Soccer Jersey",
+        prompt: "Create a modern soccer jersey with red as primary color and black accents. Add geometric patterns and make it look professional.",
+    },
+    {
+        title: "Classic Basketball Jersey",
+        prompt: "Design a classic basketball jersey in navy blue with white trim. Include traditional striping pattern.",
+    },
+    {
+        title: "Bold Team Design",
+        prompt: "Generate a bold soccer uniform with gradient effects from purple to gold. Add dynamic side panels and modern collar.",
+    },
+]
 
 export default function AIDesigner() {
     const [sport, setSport] = useState('soccer')
     const [primaryColor, setPrimaryColor] = useState('#ff0000')
     const [secondaryColor, setSecondaryColor] = useState('#ffffff')
-    const [selectedLook, setSelectedLook] = useState('sleek')
-    const [selectedPattern, setSelectedPattern] = useState('abstract')
-    const [selectedFeel, setSelectedFeel] = useState('speed')
-    const [selectedOptions, setSelectedOptions] = useState({
-        stripes: false,
-        silhouette: false,
-        texture: false
-    })
+
     const [isGenerating, setIsGenerating] = useState(false)
     const [generatedImageUrl, setGeneratedImageUrl] = useState<string | null>(null)
+    const [prompt, setPrompt] = useState('')
+
+    const handleUseExample = (examplePrompt: string) => {
+        setPrompt(examplePrompt)
+    }
 
 
 
@@ -45,13 +58,9 @@ export default function AIDesigner() {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    sport,
                     primaryColor,
                     secondaryColor,
-                    selectedLook,
-                    selectedFeel,
-                    selectedPattern,
-                    selectedOptions
+                    prompt
                 }),
             })
 
@@ -123,13 +132,10 @@ export default function AIDesigner() {
                     <Badge className="bg-red-600/10 text-red-600 hover:bg-red-600/20 mb-4">
                         AI-Powered Design
                     </Badge>
-                    {/* <h1 className="text-4xl md:text-5xl font-bold mb-16 text-black">
-                        Design Your Dream Jersey with AI
-                    </h1> */}
-                    {/* <p className="text-lg text-black-300 mb-8 ">
-                        Create unique, professional-quality jerseys in minutes. Our AI understands your preferences
-                        and generates designs that match your team's identity.
-                    </p> */}
+                    <h2 className="text-2xl font-bold mb-2">Design Your Jersey</h2>
+                    <p className="text-gray-600 mb-4">
+                        Describe your perfect jersey design and let our AI bring it to life.
+                    </p>
                 </motion.div>
 
                 <div className="grid gap-8 md:grid-cols-2">
@@ -138,7 +144,7 @@ export default function AIDesigner() {
                             <h2 className="text-2xl font-semibold mb-4">Design Options</h2>
                             <div className="space-y-4">
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Sport</label>
+                                    {/* <label className="block text-sm font-medium text-gray-700 mb-1">Sport</label>
                                     <Select value={sport} onValueChange={setSport}>
                                         <SelectTrigger>
                                             <SelectValue placeholder="Select a sport" />
@@ -148,7 +154,7 @@ export default function AIDesigner() {
                                             <SelectItem value="basketball">Basketball</SelectItem>
 
                                         </SelectContent>
-                                    </Select>
+                                    </Select> */}
                                 </div>
                                 <div>
                                     <label className="block text-sm font-medium text-gray-700 mb-1">Primary Color</label>
@@ -169,79 +175,64 @@ export default function AIDesigner() {
                                     />
                                 </div>
                                 <div>
-                                    <Label htmlFor="look" className="text-base font-semibold">Select Look</Label>
-                                    <Select onValueChange={(value) => setSelectedLook(value)}>
-                                        <SelectTrigger id="look">
-                                            <SelectValue placeholder="Choose a look" />
-                                        </SelectTrigger>
-                                        <SelectContent>
-                                            <SelectItem value="sleek">Sleek</SelectItem>
-                                            <SelectItem value="athletic">Athletic</SelectItem>
-                                            <SelectItem value="bold">Bold</SelectItem>
-                                        </SelectContent>
-                                    </Select>
+                                    <Textarea
+                                        placeholder="Describe your dream jersey design... Be specific about patterns and style."
+                                        value={prompt}
+                                        onChange={(e) => setPrompt(e.target.value)}
+                                        className="min-h-[200px] mb-4"
+                                    />
+
+                                    <Button
+                                        onClick={generateDesign}
+                                        className="w-full mt-4"
+                                        disabled={!prompt || isGenerating}
+                                    >
+                                        {isGenerating ? (
+                                            <>
+                                                <Wand2 className="mr-2 h-4 w-4 animate-spin" />
+                                                Generating Design...
+                                            </>
+                                        ) : (
+                                            <>
+                                                <Wand2 className="mr-2 h-4 w-4" />
+                                                Generate Design
+                                            </>
+                                        )}
+                                    </Button>
+
                                 </div>
 
-                                <div>
-                                    <Label htmlFor="look" className="text-base font-semibold">Select Feel</Label>
-                                    <Select onValueChange={(value) => setSelectedFeel(value)}>
-                                        <SelectTrigger id="feel">
-                                            <SelectValue placeholder="Choose a feel" />
-                                        </SelectTrigger>
-                                        <SelectContent>
-                                            <SelectItem value="Speed">Speed</SelectItem>
-                                            <SelectItem value="Strength">Strength</SelectItem>
-                                            <SelectItem value="Agility">Agility</SelectItem>
-                                        </SelectContent>
-                                    </Select>
-                                </div>
-
-                                <div>
-                                    <Label htmlFor="pattern" className="text-base font-semibold">Select Pattern Type</Label>
-                                    <Select onValueChange={(value) => setSelectedPattern(value)}>
-                                        <SelectTrigger id="pattern">
-                                            <SelectValue placeholder="Choose a pattern" />
-                                        </SelectTrigger>
-                                        <SelectContent>
-                                            <SelectItem value="abstract">Abstract</SelectItem>
-                                            <SelectItem value="geometric">Geometric</SelectItem>
-                                            <SelectItem value="minimalistic">Minimalistic</SelectItem>
-                                        </SelectContent>
-                                    </Select>
-                                </div>
-
-                                <div className="space-y-4">
-                                    <Label className="text-base font-semibold">Additional Options</Label>
-                                    <div className="flex items-center justify-between">
-                                        <Label htmlFor="stripes" className="cursor-pointer">Stripes</Label>
-                                        <Switch
-                                            id="stripes"
-                                            checked={selectedOptions.stripes}
-                                            onCheckedChange={(checked: boolean) => setSelectedOptions(prev => ({ ...prev, stripes: checked }))}
-                                        />
-                                    </div>
-                                    <div className="flex items-center justify-between">
-                                        <Label htmlFor="silhouette" className="cursor-pointer">Silhouette</Label>
-                                        <Switch
-                                            id="silhouette"
-                                            checked={selectedOptions.silhouette}
-                                            onCheckedChange={(checked: boolean) => setSelectedOptions(prev => ({ ...prev, silhouette: checked }))}
-                                        />
-                                    </div>
-                                    <div className="flex items-center justify-between">
-                                        <Label htmlFor="texture" className="cursor-pointer">Texture</Label>
-                                        <Switch
-                                            id="texture"
-                                            checked={selectedOptions.texture}
-                                            onCheckedChange={(checked: boolean) => setSelectedOptions(prev => ({ ...prev, texture: checked }))}
-                                        />
-                                    </div>
-                                </div>
-
-                                <Button onClick={generateDesign} className="w-full mt-4">
+                                {/* <Button onClick={generateDesign} className="w-full mt-4">
                                     Generate Design
                                     <ChevronRight className="ml-2 h-4 w-4" />
-                                </Button>
+                                </Button> */}
+                            </div>
+                            <div className="space-y-4 my-8">
+                                <div className="flex items-center gap-2">
+                                    <Lightbulb className="h-5 w-5 text-amber-500" />
+                                    <h3 className="font-semibold">Example Prompts</h3>
+                                </div>
+
+                                <div className="grid gap-3">
+                                    {examplePrompts.map((example, index) => (
+                                        <motion.div
+                                            key={index}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ delay: index * 0.1 }}
+                                        >
+                                            <Card
+                                                className="p-4 cursor-pointer hover:bg-gray-50 transition-colors"
+                                                onClick={() => handleUseExample(example.prompt)}
+                                            >
+                                                <Badge className="mb-2 bg-red-100 text-red-700 hover:bg-red-200">
+                                                    {example.title}
+                                                </Badge>
+                                                <p className="text-sm text-gray-600">{example.prompt}</p>
+                                            </Card>
+                                        </motion.div>
+                                    ))}
+                                </div>
                             </div>
                         </CardContent>
                     </Card>

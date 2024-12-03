@@ -9,13 +9,10 @@ config({
 export async function POST(request: NextRequest) {
     try {
         const {
-            sport,
             primaryColor,   // This will be hex color like "#FF0000"
             secondaryColor, // This will be hex color like "#0000FF"
-            selectedLook,
-            selectedFeel,
-            selectedPattern,
-            selectedOptions,
+            prompt
+
         } = await request.json();
 
         const hexToColorName = (hex: string) => {
@@ -158,28 +155,9 @@ export async function POST(request: NextRequest) {
         };
 
         // Construct the prompt using hex colors directly
-        const detailedPrompt = `Design a modern ${sport} jersey using these exact colors:
+        const detailedPrompt = `using these exact colors:
 PRIMARY COLOR: ${primaryColor} (${hexToColorName(primaryColor)})
-SECONDARY COLOR: ${secondaryColor} (${hexToColorName(secondaryColor)})
-
-Key Instructions:
-- The main body MUST be colored #${primaryColor}
-- All trim and accents MUST be colored #${secondaryColor}
-
-Design Elements:
-- ${selectedLook} silhouette with professional appearance
-${selectedPattern !== 'minimalistic' ? `- ${selectedPattern} pattern integrated into the design` : '- Clean, minimalistic design'}
-${selectedOptions.stripes ? '- Subtle accent stripes' : ''}
-${selectedOptions.silhouette ? '- Contoured design elements' : ''}
-${selectedOptions.texture ? '- Subtle performance fabric texture' : ''}
-
-Technical Specifications:
-- Performance athletic cut
-- Strategic color placement
-${sport === 'basketball' ? '- Basketball-specific shoulder cut' : ''}
-${sport === 'soccer' ? '- Soccer-specific sleeve design' : ''}
-
-Style Focus: ${selectedFeel}`
+SECONDARY COLOR: ${secondaryColor} (${hexToColorName(secondaryColor)}), ${prompt}`
 
 
 
