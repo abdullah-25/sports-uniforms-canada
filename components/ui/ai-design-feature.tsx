@@ -52,7 +52,7 @@ export default function AIDesignerFeature() {
     // const [isPlaying, setIsPlaying] = useState(false)
 
     return (
-        <section className="py-8 bg-neutral-700 ">
+        <section className="py-8 bg-gradient-to-br from-gray-50 to-red-50 ">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <motion.div
@@ -66,8 +66,8 @@ export default function AIDesignerFeature() {
                             <Badge className="bg-red-100 text-red-800 hover:bg-red-100 mb-4">
                                 AI-Powered Design
                             </Badge>
-                            <h2 className="text-4xl text-neutral-100 font-bold mb-4">Design Your Dream Jersey with AI</h2>
-                            <p className="text-lg text-neutral-100 mb-6">
+                            <h2 className="text-4xl  font-bold mb-4">Design Your Dream Jersey with AI</h2>
+                            <p className="text-lg  mb-6">
                                 Experience the future of sports uniform design with our cutting-edge AI Designer.
                                 Create unique, personalized jerseys in minutes, no design skills required!
                             </p>
