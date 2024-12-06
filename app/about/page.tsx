@@ -28,11 +28,14 @@ export default function AboutUs() {
                     </div>
                     <div className="space-y-4">
                         <h2 className="text-2xl font-semibold">Our Story</h2>
-                        <p className="text-gray-700">
-                            Founded in 2024, Sports Uniforms Canada has quickly become a go-to provider of premium, customizable uniforms for sports teams. What started as a new venture has rapidly grown thanks to our unbeatable combination of top-notch quality and competitive pricing.
+                        <p className="text-gray-700 mb-4">
+                            At Sports Uniforms Canada, we started with a vision: to transform the way teams connect through custom sports apparel. What began as a small endeavor has grown into a trusted name for quality, creativity, and affordability in the sportswear industry.
                         </p>
-                        <p className="text-gray-700">
-                            Serving numerous happy clients in the GTA, we take pride in offering uniforms that not only look great but also provide comfort and durability. Our commitment to excellence continues as we expand and deliver standout uniforms to even more teams across the region.
+                        <p className="text-gray-700 mb-4">
+                            Our roots are grounded in our love for sports and teamwork. Over the years, we've worked with diverse teams—from local recreational leagues to competitive clubs—delivering uniforms that combine functionality with striking designs. Every jersey, short, or kit we create tells a story of teamwork, dedication, and passion.
+                        </p>
+                        <p className="text-gray-700 mb-4">
+                            We’re proud to offer more than just uniforms; we offer a way for teams to express their identity, build camaraderie, and leave a lasting impression. Our journey is driven by a commitment to craftsmanship, attention to detail, and the belief that every team deserves to stand out on their terms.
                         </p>
                     </div>
                 </div>
@@ -41,10 +44,13 @@ export default function AboutUs() {
                     <CardContent className="p-6">
                         <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
                         <p className="text-gray-700 mb-4">
-                            At Sports Uniforms Canada, our mission is to empower teams with high-quality, customizable uniforms that not only look great but also enhance performance. We believe that when athletes feel confident in their uniforms, they perform better on the field.
+                            Our mission is simple: to empower teams with exceptional sportswear that inspires confidence, fosters unity, and elevates performance.
                         </p>
-                        <p className="text-gray-700">
-                            We're committed to innovation, sustainability, and exceptional customer service. Our goal is to be the go-to uniform provider for sports teams across Canada, from local recreational leagues to professional organizations.
+                        <p className="text-gray-700 mb-4 ">
+                            We are dedicated to providing high-quality, customizable uniforms at accessible prices without compromising on durability or design. By combining advanced manufacturing techniques, sustainable practices, and a customer-first approach, we aim to be the go-to partner for teams across Canada and beyond.
+                        </p>
+                        <p className="text-gray-700 mb-4">
+                            At the heart of what we do is a passion for helping teams represent their values, culture, and ambition. Whether you're a grassroots club or a professional team, our mission is to ensure you look and feel like champions every time you step onto the field, court, or rink—because our uniforms are Crafted for Champions, Worn by All.
                         </p>
                     </CardContent>
                 </Card>
