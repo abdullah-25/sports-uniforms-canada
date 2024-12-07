@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} font-sans antialiased  bg-gradient-to-br from-white via-red-50/30 to-red-100/20 flex flex-col min-h-screen mesh-gradient`}>
+      <body className={`${poppins.variable} font-sans antialiased  flex flex-col min-h-screen `}>
 
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
         <Header />

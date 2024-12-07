@@ -41,7 +41,7 @@ export default function OurProductsSection() {
     const [hoveredProduct, setHoveredProduct] = useState<string | null>(null)
 
     return (
-        <section className="py-8">
+        <section className="py-8 ">
             <div className="container max-w-[90%] mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {products.map((product, index) => (

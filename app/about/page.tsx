@@ -106,7 +106,7 @@ export default function AboutUs() {
     })
 
     return (
-        <div className={`min-h-screen bg-gradient-to-br from-gray-50 to-red-50 ${poppins.className}`}>
+        <div className={`min-h-screen custom-bg relative ${poppins.className}`}>
             <main className="container mx-auto px-4 py-28 pt-36">
                 {/* About Section */}
                 <div className="grid gap-8 md:grid-cols-2 mb-20">
@@ -169,7 +169,7 @@ export default function AboutUs() {
                 </div>
 
                 {/* FAQ Section */}
-                <section className="mb-20">
+                <section className="mb-20 ">
                     <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Frequently Asked Questions</h2>
                     <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
                         Find answers to common questions about our custom sports uniforms, ordering process, and more.

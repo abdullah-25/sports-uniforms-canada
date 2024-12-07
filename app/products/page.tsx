@@ -104,7 +104,7 @@ export default function Products() {
         }
     ]
     return (
-        <div className={`bg-gradient-to-br from-white via-red-50/30 to-red-100/20 flex flex-col min-h-screen mesh-gradient ${poppins.className}`}>
+        <div className={`custom-bg relative flex flex-col min-h-screen mesh-gradient ${poppins.className}`}>
 
 
             <main className="flex-grow container mx-auto px-4 py-28">

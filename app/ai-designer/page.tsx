@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { ChevronRight, Loader2 } from 'lucide-react'
+import { ChevronRight, Loader2, Download } from 'lucide-react'
 import { Poppins } from 'next/font/google'
 import { useState } from 'react'
 import { Switch } from "@/components/ui/switch"
@@ -14,6 +14,7 @@ import { motion } from 'framer-motion'
 import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
 import { Lightbulb, Wand2 } from 'lucide-react'
+import Link from 'next/link'
 
 
 const poppins = Poppins({
@@ -46,6 +47,9 @@ export default function AIDesigner() {
 
     const handleUseExample = (examplePrompt: string) => {
         setPrompt(examplePrompt)
+    }
+    function handleRequestQuote() {
+        return <Link href='/contact'></Link>
     }
 
 
@@ -123,10 +127,10 @@ export default function AIDesigner() {
 
 
     return (
-        <div className={`flex flex-col min-h-screen  bg-gradient-to-br from-white via-red-50/30 to-red-100/20 flex flex-col min-h-screen mesh-gradient${poppins.className}`}>
+        <div className={` custom-bg relative flex flex-col min-h-screen ${poppins.className}`}>
 
 
-            <main className="flex-grow container mx-auto px-4 py-28">
+            <main className=" custom-bg relative flex-grow container mx-auto px-4 py-28">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -141,7 +145,7 @@ export default function AIDesigner() {
                     </p>
                 </motion.div>
 
-                <div className={`grid gap-8 md:grid-cols-2 ${poppins.className}`}>
+                <div className={` grid gap-8 md:grid-cols-2 ${poppins.className}`}>
                     <Card>
                         <CardContent className="p-6">
                             <h2 className={`text-2xl font-semibold mb-4${poppins.className}`}>Design Options</h2>
@@ -267,17 +271,24 @@ export default function AIDesigner() {
                                     onClick={handleSaveDesign}
                                     disabled={!generatedImageUrl}
                                 >
-                                    {/* <Download className="mr-2 h-4 w-4" /> Optional: Add download icon */}
+                                    <Download className="mr-2 h-4 w-4" />
                                     Save Design
                                 </Button>
-                                <Button
-                                    className="w-full"
+                                <Link href='/contact'>
+                                    <Button
+                                        className="w-full my-5"
+                                        disabled={!generatedImageUrl}
                                     // onClick={handleRequestQuote}
-                                    disabled={!generatedImageUrl}
-                                >
-                                    Request Quote
-                                </Button>
+
+                                    >
+                                        Request Quote
+                                    </Button>
+                                </Link>
+
+
+
                             </div>
+
                         </CardContent>
                     </Card>
                 </div>

@@ -38,7 +38,7 @@ export default function Gallery() {
     )
 
     return (
-        <div className={`flex flex-col min-h-screen  bg-gradient-to-br from-white via-red-50/30 to-red-100/20 flex flex-col min-h-screen mesh-gradient ${poppins.className}`}>
+        <div className={`flex flex-col min-h-screen custom-bg relative ${poppins.className}`}>
 
             <main className="flex-grow container mx-auto px-4 py-28">
                 <motion.h1

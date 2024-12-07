@@ -26,8 +26,9 @@ const heroImages = [
     {
         src: "/DSC_7899-Enhanced-NR.jpg",
         alt: "Sports team in action",
-        title: "Elevate Your Team's Look",
-        description: "Custom uniforms for champions",
+        title: "Your Dream Jersey, Designed by AI in Seconds",
+        // title: "Elevate Your Team's Look",
+        description: "Custom uniforms that capture your team's spirit, without the wait",
     },
     {
         src: "/secondHero.jpg",
@@ -133,7 +134,7 @@ export default function ModernHeaderHero() {
             </AnimatePresence>
 
             <section className="relative h-screen overflow-hidden">
-                <Slider {...settings} className="h-full [&_.slick-list]:h-full [&_.slick-track]:h-full [&_.slick-slide]:h-full [&_.slick-slide>div]:h-full">
+                <Slider {...settings} className="h-full overflow-x-hidden [&_.slick-list]:h-full [&_.slick-track]:h-full [&_.slick-slide]:h-full [&_.slick-slide>div]:h-full">
                     {heroImages.map((image, index) => (
                         <div key={index} className="relative h-full">
                             <div className="absolute inset-0">
@@ -164,10 +165,10 @@ export default function ModernHeaderHero() {
                             transition={{ duration: 0.5 }}
                             className="max-w-3xl"
                         >
-                            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                            <h1 className="text-2xl md:text-3xl font-bold text-white mb-4 w-full ">
                                 {heroImages[currentSlide].title}
                             </h1>
-                            <p className="text-xl md:text-2xl text-gray-200 mb-8">
+                            <p className="text-xl md:text-1xl text-gray-200 mb-8">
                                 {heroImages[currentSlide].description}
                             </p>
                             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">

@@ -126,7 +126,7 @@ export default function AIDesignerFeature() {
                         className="relative"
                     >
                         <div
-                            className="relative aspect-[3/4] rounded-xl overflow-hidden"
+                            className="relative aspect-[4/4.5] rounded-xl overflow-hidden"
                             onMouseEnter={() => setIsHovered(true)}
                             onMouseLeave={() => setIsHovered(false)}
                         >
