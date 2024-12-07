@@ -8,10 +8,13 @@ import { Card, CardContent } from "@/components/ui/card"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Label } from "@/components/ui/label"
 import { ChevronRight } from 'lucide-react'
-import { Inter } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import { useState } from 'react'
 
-const inter = Inter({ subsets: ['latin'] })
+const poppins = Poppins({
+    weight: ['400'],  // or whatever weights you need
+    subsets: ['latin']
+})
 
 export default function Gallery() {
     const [sport, setSport] = useState('all')
@@ -35,7 +38,8 @@ export default function Gallery() {
     )
 
     return (
-        <div className={`flex flex-col min-h-screen bg-gradient-to-br from-gray-50 to-red-50 ${inter.className}`}>
+        <div className={`flex flex-col min-h-screen  bg-gradient-to-br from-white via-red-50/30 to-red-100/20 flex flex-col min-h-screen mesh-gradient ${poppins.className}`}>
+
             <main className="flex-grow container mx-auto px-4 py-28">
                 <motion.h1
                     initial={{ opacity: 0, y: -20 }}

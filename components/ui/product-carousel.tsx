@@ -83,7 +83,7 @@ export default function ProductCarousel() {
     }
 
     return (
-        <section className="py-16 bg-gradient-to-br from-gray-50 to-red-50">
+        <section className="py-16 bg-gradient-to-br from-white via-red-50 to-red-100">
             <div className="container mx-auto px-4">
                 {/* <motion.div
                     initial={{ opacity: 0, y: 20 }}

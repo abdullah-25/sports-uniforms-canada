@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { ChevronRight, Loader2 } from 'lucide-react'
-import { Inter } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import { useState } from 'react'
 import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
@@ -16,7 +16,10 @@ import { Badge } from "@/components/ui/badge"
 import { Lightbulb, Wand2 } from 'lucide-react'
 
 
-const inter = Inter({ subsets: ['latin'] })
+const poppins = Poppins({
+    weight: ['400'],  // or whatever weights you need
+    subsets: ['latin']
+})
 const examplePrompts = [
     {
         title: "Modern Soccer Jersey",
@@ -120,7 +123,7 @@ export default function AIDesigner() {
 
 
     return (
-        <div className={`flex flex-col min-h-screen  bg-gradient-to-br from-gray-50 to-red-50${inter.className}`}>
+        <div className={`flex flex-col min-h-screen  bg-gradient-to-br from-white via-red-50/30 to-red-100/20 flex flex-col min-h-screen mesh-gradient${poppins.className}`}>
 
 
             <main className="flex-grow container mx-auto px-4 py-28">
@@ -138,10 +141,10 @@ export default function AIDesigner() {
                     </p>
                 </motion.div>
 
-                <div className="grid gap-8 md:grid-cols-2">
+                <div className={`grid gap-8 md:grid-cols-2 ${poppins.className}`}>
                     <Card>
                         <CardContent className="p-6">
-                            <h2 className="text-2xl font-semibold mb-4">Design Options</h2>
+                            <h2 className={`text-2xl font-semibold mb-4${poppins.className}`}>Design Options</h2>
                             <div className="space-y-4">
                                 <div>
                                     {/* <label className="block text-sm font-medium text-gray-700 mb-1">Sport</label>
@@ -207,7 +210,7 @@ export default function AIDesigner() {
                                     <ChevronRight className="ml-2 h-4 w-4" />
                                 </Button> */}
                             </div>
-                            <div className="space-y-4 my-8">
+                            <div className="space-y-4 my-8 ">
                                 <div className="flex items-center gap-2">
                                     <Lightbulb className="h-5 w-5 text-amber-500" />
                                     <h3 className="font-semibold">Example Prompts</h3>
@@ -237,8 +240,8 @@ export default function AIDesigner() {
                         </CardContent>
                     </Card>
                     <Card>
-                        <CardContent className="p-6">
-                            <h2 className="text-2xl font-semibold mb-4">Preview</h2>
+                        <CardContent className={`p-6  ${poppins.className}`}>
+                            <h2 className={`text-2xl font-semibold mb-4 ${poppins.className}`}>Preview</h2>
                             <div className="aspect-square bg-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
                                 {isGenerating ? (
                                     <div className="flex flex-col items-center">
@@ -278,9 +281,9 @@ export default function AIDesigner() {
                         </CardContent>
                     </Card>
                 </div>
-            </main>
+            </main >
 
 
-        </div>
+        </div >
     )
 }

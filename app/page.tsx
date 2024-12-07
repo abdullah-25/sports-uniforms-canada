@@ -17,7 +17,7 @@ export default function Home() {
       {/* <QuickActions /> */}
       {/* <ProductCarousel /> */}
       <OurProducts />
-      {/* <ProductFeatures /> */}
+      <ProductFeatures />
       <AIDesignerFeature />
       <FreeInGameContent />
 
@@ -25,7 +25,7 @@ export default function Home() {
 
       <TrustedByCarousel />
       <Testimonials />
-      <Faq />
+      {/* <Faq /> */}
 
 
     </main>

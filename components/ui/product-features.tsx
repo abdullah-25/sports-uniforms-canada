@@ -65,13 +65,13 @@ export default function ProductFeatures() {
                         transition={{ duration: 0.5, delay: 0.4 }}
                         viewport={{ once: true }}
                     >
-                        <Button
+                        {/* <Button
                             variant="outline"
                             className="bg-red-600 hover:bg-red-700 text-white transition-colors duration-300"
                         // className="text-black border border-black hover:bg-black hover:text-white transition-colors"
                         >
                             Learn more
-                        </Button>
+                        </Button> */}
                     </motion.div>
                 </div>
             </motion.div>
@@ -118,12 +118,12 @@ export default function ProductFeatures() {
                                 transition={{ duration: 0.5, delay: 0.4 }}
                                 viewport={{ once: true }}
                             >
-                                <Button
+                                {/* <Button
                                     variant="outline"
                                     className="bg-red-600 hover:bg-red-700 text-white transition-colors duration-300"
                                 >
                                     Learn more
-                                </Button>
+                                </Button> */}
                             </motion.div>
                         </div>
                     </motion.div>

@@ -164,7 +164,7 @@ export default function ModernHeaderHero() {
                             transition={{ duration: 0.5 }}
                             className="max-w-3xl"
                         >
-                            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+                            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
                                 {heroImages[currentSlide].title}
                             </h1>
                             <p className="text-xl md:text-2xl text-gray-200 mb-8">
