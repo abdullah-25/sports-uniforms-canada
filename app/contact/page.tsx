@@ -122,13 +122,20 @@ export default function Contact() {
                                     </div>
                                     <div className="flex items-center">
                                         <MapPin className="h-5 w-5 mr-2 text-red-600" />
-                                        <span>123 Uniform Street, Toronto, ON M1M 1M1</span>
+                                        <span>145 Wicksteed Ave, East York, ON, M4G 4H9 *</span>
                                     </div>
+
+                                    <div className="flex items-center">
+
+                                        <span> * Please let us know before visiting, as this is a shared facility.</span>
+                                    </div>
+
+
                                 </div>
                             </CardContent>
                         </Card>
 
-                        <Card className="backdrop-blur-sm bg-white/95">
+                        {/* <Card className="backdrop-blur-sm bg-white/95">
                             <CardContent className="p-6">
                                 <h2 className="text-2xl font-semibold mb-4">Business Hours</h2>
                                 <ul className="space-y-2">
@@ -137,7 +144,7 @@ export default function Contact() {
                                     <li><strong>Sunday:</strong> Closed</li>
                                 </ul>
                             </CardContent>
-                        </Card>
+                        </Card> */}
 
                         <Card className="backdrop-blur-sm bg-white/95">
                             <CardContent className="p-6">
@@ -150,6 +157,22 @@ export default function Contact() {
                                         rel="noopener noreferrer"
                                     >
                                         Instagram
+                                    </a>
+                                    <a
+                                        href="https://www.facebook.com/profile.php?id=61564086935491"
+                                        className="text-red-600 hover:text-red-800 transition-colors"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Facebook
+                                    </a>
+                                    <a
+                                        href="https://www.linkedin.com/company/sportsuniformscanada"
+                                        className="text-red-600 hover:text-red-800 transition-colors"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Linkedin
                                     </a>
                                 </div>
                             </CardContent>
