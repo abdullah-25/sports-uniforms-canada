@@ -10,15 +10,15 @@ import Link from 'next/link'
 
 export default function BasketballUniformsPage() {
     const products = [
-        { name: 'basketball Kits', price: 35, src: '/our-products/basketball-1.jpg' },
-        { name: 'Jerseys', price: 28, src: '/our-products/basketball-2.jpg' },
-        { name: 'Shorts', price: 10, src: '/our-products/basketball-3.jpg' },
-        { name: 'Reversible Kit', price: 32, src: '/our-products/basketball-4.jpg' },
-        { name: 'Reversible Jerseys', price: 35, src: '/our-products/basketball-5.jpg' },
-        { name: 'Reversible Shorts', price: 15, src: '/our-products/basketball-6.jpg' },
-        { name: 'Reversibles Kit', price: 32, src: '/our-products/basketball-7.jpg' },
-        { name: 'Reversibles Jerseys', price: 35, src: '/our-products/basketball-8.jpg' },
-        { name: 'Reversibles Shorts', price: 15, src: '/our-products/basketball-9.jpg' },
+        { name: 'basketball Kits', price: 45, src: '/our-products/basketball-1.jpg' },
+        { name: 'Jerseys', price: 35, src: '/our-products/basketball-2.jpg' },
+        { name: 'Shorts', price: 15, src: '/our-products/basketball-3.jpg' },
+        // { name: 'Reversible Kit', price: 32, src: '/our-products/basketball-4.jpg' },
+        // { name: 'Reversible Jerseys', price: 35, src: '/our-products/basketball-5.jpg' },
+        // { name: 'Reversible Shorts', price: 15, src: '/our-products/basketball-6.jpg' },
+        // { name: 'Reversibles Kit', price: 32, src: '/our-products/basketball-7.jpg' },
+        // { name: 'Reversibles Jerseys', price: 35, src: '/our-products/basketball-8.jpg' },
+        // { name: 'Reversibles Shorts', price: 15, src: '/our-products/basketball-9.jpg' },
     ]
 
     const customizationData = {
@@ -91,10 +91,10 @@ export default function BasketballUniformsPage() {
                         <Table>
                             <TableHeader>
                                 <TableRow>
-                                    <TableHead>Common Fabrics Used</TableHead>
-                                    <TableHead>Printing Methods</TableHead>
-                                    <TableHead>Product Customization</TableHead>
-                                    <TableHead>Additional Add-ons</TableHead>
+                                    <TableHead className="font-bold">Fabrics Used</TableHead>
+                                    <TableHead className="font-bold">Printing Methods</TableHead>
+                                    <TableHead className="font-bold">Product Customization</TableHead>
+                                    <TableHead className="font-bold">Additional Add-ons</TableHead>
                                 </TableRow>
                             </TableHeader>
                             <TableBody>

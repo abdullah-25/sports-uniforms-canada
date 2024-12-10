@@ -11,12 +11,10 @@ import Link from 'next/link'
 
 export default function SoccerUniformsPage() {
     const products = [
-        { name: 'Soccer Kits', price: 35, src: '/our-products/soccer-1.jpg' },
-        { name: 'Jerseys', price: 28, src: '/our-products/soccer-2.jpg' },
-        { name: 'Shorts', price: 10, src: '/our-products/soccer-3.jpg' },
-        { name: 'Reversible Kit', price: 32, src: '/our-products/soccer-4.jpg' },
-        { name: 'Reversible Jerseys', price: 35, src: '/our-products/soccer-5.jpg' },
-        { name: 'Reversible Shorts', price: 15, src: '/our-products/soccer-7.jpg' },
+        { name: 'Soccer Kits', price: 45, src: '/our-products/soccer-1.jpg' },
+        { name: 'Jerseys', price: 35, src: '/our-products/soccer-2.jpg' },
+        { name: 'Shorts', price: 15, src: '/our-products/soccer-3.jpg' },
+
     ]
 
     const customizationData = {
@@ -71,8 +69,8 @@ export default function SoccerUniformsPage() {
                                                 className="object-cover"
                                             />
                                         </div>
-                                        {/* <h3 className="text-xl font-semibold mb-2">{product.name}</h3> */}
-                                        {/* <p className="text-gray-600">Starting from ${product.price}</p> */}
+                                        <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
+                                        <p className="text-gray-600">Starting from ${product.price}</p>
                                     </CardContent>
                                 </Card>
                             </motion.div>
@@ -94,10 +92,10 @@ export default function SoccerUniformsPage() {
                         <Table>
                             <TableHeader>
                                 <TableRow>
-                                    <TableHead>Common Fabrics Used</TableHead>
-                                    <TableHead>Printing Methods</TableHead>
-                                    <TableHead>Product Customization</TableHead>
-                                    <TableHead>Additional Add-ons</TableHead>
+                                    <TableHead className="font-bold">Fabrics Used</TableHead>
+                                    <TableHead className="font-bold">Printing Methods</TableHead>
+                                    <TableHead className="font-bold">Product Customization</TableHead>
+                                    <TableHead className="font-bold">Additional Add-ons</TableHead>
                                 </TableRow>
                             </TableHeader>
                             <TableBody>
