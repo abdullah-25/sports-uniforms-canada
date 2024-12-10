@@ -5,7 +5,8 @@ import Footer from "@/components/ui/footer"
 import { Inter } from 'next/font/google'
 import { Poppins } from 'next/font/google'
 import { GoogleAnalytics } from '@next/third-parties/google'
-
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
@@ -37,6 +38,8 @@ export default function RootLayout({
         <Header />
         <main className="flex-grow">
           {children}
+          <Analytics />
+          <SpeedInsights />
         </main>
         <Footer />
       </body>
