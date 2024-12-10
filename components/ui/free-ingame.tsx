@@ -12,7 +12,7 @@ import { Camera, Play, Share2, ChevronRight } from 'lucide-react'
 const contentExamples = [
     // { type: 'image', src: '/placeholder.svg?height=600&width=800&text=Action+Shot+1', alt: 'Soccer team scoring a goal' },
     // { type: 'image', src: '/placeholder.svg?height=600&width=800&text=Action+Shot+2', alt: 'Basketball team celebrating' },
-    { type: 'video', src: '/video-feature.mp4', alt: 'game vidoe', poster: '' },
+    { type: 'video', src: '/video-feature.MP4', alt: 'game vidoe', poster: '' },
 ]
 
 const features = [
@@ -47,7 +47,7 @@ export default function FreeInGameContent() {
     return (
         <section id="free-content-section" className="py-8 bg-gradient-to-br from-gray-50 to-red-50">
             <div className="container mx-auto px-4">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 items-center">
                     {/* Left side - Video */}
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
@@ -81,6 +81,7 @@ export default function FreeInGameContent() {
                                         loop
                                         muted
                                         playsInline
+
                                     />
                                 )}
                             </motion.div>
