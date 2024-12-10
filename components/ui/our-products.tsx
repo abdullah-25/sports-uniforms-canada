@@ -11,16 +11,16 @@ import { Star, ChevronRight } from 'lucide-react'
 const products = [
     {
         title: "soccer",
-        name: "Soccer Uniforms",
+        name: "Soccer Products",
         description: "Customizable soccer uniforms for all levels, made with high-performance fabrics to ensure durability and comfort. Perfect for teams seeking a professional look and feel.",
-        image: "/our-products/soccer.jpg",
+        image: "/our-products/Soccer.jpg",
         link: "/soccer"
     },
     {
         title: "basketball",
-        name: "Basketball Jerseys",
+        name: "Basketball Products",
         description: "Premium quality basketball jerseys that combine style with functionality. Designed for optimal performance and team branding, suitable for all court warriors.",
-        image: "/our-products/basketball.jpg",
+        image: "/our-products/Basketball.jpg",
         link: "/basketball"
     }
 ]
