@@ -11,14 +11,14 @@ const products = [
         title: "soccer",
         name: "Soccer Products",
         description: "Customizable soccer uniforms for all levels, made with high-performance fabrics to ensure durability and comfort. Perfect for teams seeking a professional look and feel.",
-        image: "/our-products/Soccer.jpg",
+        image: "/our-products/soccer-new.jpg",
         link: "/soccer"
     },
     {
         title: "basketball",
         name: "Basketball Products",
         description: "Premium quality basketball jerseys that combine style with functionality. Designed for optimal performance and team branding, suitable for all court warriors.",
-        image: "/our-products/Basketball.jpg",
+        image: "/our-products/basketball-new.jpg",
         link: "/basketball"
     }
 ]
