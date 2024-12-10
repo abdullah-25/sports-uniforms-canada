@@ -24,15 +24,15 @@ const poppins = Poppins({
 const examplePrompts = [
     {
         title: "Modern Soccer Jersey",
-        prompt: "Create a modern soccer jersey with red as primary color and black accents. Add geometric patterns and make it look professional.",
+        prompt: "Create a modern soccer jersey. Add geometric patterns and make it look professional.",
     },
     {
         title: "Classic Basketball Jersey",
-        prompt: "Design a classic basketball jersey in navy blue with white trim. Include traditional striping pattern.",
+        prompt: "Design a classic basketball jersey. Include traditional striping pattern.",
     },
     {
         title: "Bold Team Design",
-        prompt: "Generate a bold soccer uniform with gradient effects from purple to gold. Add dynamic side panels and modern collar.",
+        prompt: "Generate a bold soccer uniform with gradient effects. Add dynamic side panels and modern collar.",
     },
 ]
 
@@ -127,10 +127,10 @@ export default function AIDesigner() {
 
 
     return (
-        <div className={` custom-bg relative flex flex-col min-h-screen ${poppins.className}`}>
+        <div className={` py-12 custom-bg relative flex flex-col min-h-screen ${poppins.className}`}>
 
 
-            <main className=" custom-bg relative flex-grow container mx-auto px-4 py-28">
+            <main className="  relative flex-grow container mx-auto px-4 py-28">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -183,7 +183,7 @@ export default function AIDesigner() {
                                 </div>
                                 <div>
                                     <Textarea
-                                        placeholder="Describe your dream jersey design... Be specific about patterns and style."
+                                        placeholder="Describe your dream jersey design... Be specific about colours, patterns and style."
                                         value={prompt}
                                         onChange={(e) => setPrompt(e.target.value)}
                                         className="min-h-[200px] mb-4"
