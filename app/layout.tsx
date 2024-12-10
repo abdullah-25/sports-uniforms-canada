@@ -35,11 +35,11 @@ export default function RootLayout({
       <body className={`${poppins.variable} font-sans antialiased  flex flex-col min-h-screen `}>
 
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
+        <Analytics />
+        <SpeedInsights />
         <Header />
         <main className="flex-grow">
           {children}
-          <Analytics />
-          <SpeedInsights />
         </main>
         <Footer />
       </body>

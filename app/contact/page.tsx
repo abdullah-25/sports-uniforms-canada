@@ -8,8 +8,8 @@ import { ChevronRight, Mail, Phone, MapPin } from 'lucide-react'
 import { Inter } from 'next/font/google'
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import Link from 'next/link'
-import { Lightbulb, Wand2 } from 'lucide-react'
+
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -44,7 +44,7 @@ export default function Contact() {
     };
 
     return (
-        <main className="relative min-h-screen custom-bg">
+        <main className="relative custom-bg">
             {/* Semi-transparent overlay */}
             <div className="absolute inset-0 "></div>
 
