@@ -4,9 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Star, ChevronRight } from 'lucide-react'
+import { ChevronRight } from 'lucide-react'
 
 const products = [
     {
