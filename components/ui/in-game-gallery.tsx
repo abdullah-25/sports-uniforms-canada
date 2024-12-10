@@ -14,13 +14,13 @@ export default function InGameGallery() {
         <section className="py-8 bg-gradient-to-br from-gray-50 to-red-50">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl font-bold mb-4">Gallery</h2>
+                    <h2 className="text-4xl font-bold mb-4"></h2>
                     {/* <p className="text-gray-600 max-w-2xl mx-auto">
                         See our uniforms in action. Browse through our gallery of teams wearing our custom-designed uniforms.
                     </p> */}
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-                    {[1, 2, 3, 4].map((image) => (
+                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((image) => (
                         <motion.div
                             key={image}
                             initial={{ opacity: 0, scale: 0.9 }}
