@@ -103,11 +103,14 @@ export default function FreeInGameContent() {
                     >
                         <div className="">
                             <Badge className="bg-red-100 text-white-800 hover:bg-red-100 mb-4">
-                                Exclusive Offer
+                                Exclusive Offer*
                             </Badge>
                             <h2 className="text-3xl font-bold mb-4">Free Content with Every Jersey Purchase</h2>
                             <p className="text-lg text-gray-600">
                                 Get professional in-game content to capture your team's best moments—at no extra cost. Perfect for sharing highlights and building your team's presence.
+                            </p>
+                            <p className="text-sm mt-2 text-gray-600">
+                                * Only available for teams located in the GTA. Not all teams may be selected.
                             </p>
                         </div>
 
