@@ -29,7 +29,7 @@ export default function Gallery() {
         { id: 6, sport: 'basketball', year: '2024', title: 'Chip Chaser', image: '/gallery/chipchaser.jpg' },
         { id: 7, sport: 'basketball', year: '2024', title: 'Dream Team', image: '/gallery/dreamteam.jpg' },
         { id: 8, sport: 'basketball', year: '2024', title: 'Spidaa', image: '/gallery/spidaa.jpg' },
-        { id: 9, sport: 'basketball', year: '2024', title: 'Swishaz', image: '/gallery/swishaz.jpg' },
+        { id: 9, sport: 'basketball', year: '2024', title: 'Swishaz', image: '/gallery/Swishaz.jpg' },
     ]
 
     const filteredItems = galleryItems.filter(item =>
