@@ -71,11 +71,15 @@ export default function Contact() {
                             <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
                                 <div>
                                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                                    <Input name="user_name" id="name" placeholder="Your Name" required />
+                                    <Input name="from_name" id="name" placeholder="Your Name" required />
                                 </div>
                                 <div>
                                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                                    <Input name="user_email" id="email" type="email" placeholder="your@email.com" required />
+                                    <Input name="email" id="email" type="email" placeholder="your@email.com" required />
+                                </div>
+                                <div>
+                                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                    <Input name="phone" id="phone" type="phone" placeholder="123-456-789" required />
                                 </div>
                                 <div>
                                     <label htmlFor="inquiry-type" className="block text-sm font-medium text-gray-700 mb-1">Inquiry Type</label>
