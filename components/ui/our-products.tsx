@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ChevronRight } from 'lucide-react'
+import { Button } from "@/components/ui/button"
 
 const products = [
     {
@@ -50,18 +51,23 @@ export default function OurProductsSection() {
                             transition={{ duration: 0.5, delay: index * 0.2 }}
                         >
                             <div className="group relative aspect-square">
-                                <Image
-                                    src={product.image}
-                                    alt={product.name}
-                                    fill
-                                    className="object-cover"
-                                />
+                                <Link href={product.link}>
+                                    <Image
+                                        src={product.image}
+                                        alt={product.name}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </Link>
 
                             </div>
-                            <Link href={product.link} className="py-8 flex items-center text-lg font-large text-black hover:text-black-700">
-                                {product.name}
-                                <ChevronRight className="ml-2 h-5 w-5" />
+                            <Link href={product.link}>
+                                <Button size="lg" className="mt-4 bg-red-600 hover:bg-red-700 text-white">
+                                    {product.name}
+                                    <ChevronRight className="ml-2 h-4 w-4" />
+                                </Button>
                             </Link>
+
                         </motion.div>
                     ))}
                 </div>
