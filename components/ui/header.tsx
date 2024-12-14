@@ -45,7 +45,7 @@ export default function Header() {
                 <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
                     <Link href="/" className="text-2xl font-bold text-white">
                         <Image
-                            src='/logo.png'
+                            src='/logo-hero.PNG'
                             alt="Sports Uniforms Canada"
                             width={50}
                             height={50}
