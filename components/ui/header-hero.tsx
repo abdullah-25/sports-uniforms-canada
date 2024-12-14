@@ -45,7 +45,7 @@ const heroImages = [
         description: "Champions wear excellence",
     },
     {
-        src: "/fifthHero.jpeg",
+        src: "/fifthHero.jpg",
         alt: "Basketball team on court",
         title: "Victory Essential",
         description: "Premium sportswear simplified",
@@ -61,6 +61,12 @@ const heroImages = [
         alt: "Basketball team celebrating",
         title: "Game Day Ready",
         description: "Trusted by athletes",
+    },
+    {
+        src: "/eightHero.jpg",
+        alt: "Basketball team celebrating",
+        title: "Victory Essential",
+        description: "Premium sportswear simplified",
     },
 ]
 
