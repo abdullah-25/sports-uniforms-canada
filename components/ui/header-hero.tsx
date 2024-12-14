@@ -57,7 +57,7 @@ const heroImages = [
         description: "Gear that performs, delivered",
     },
     {
-        src: "/secondHero.jpg",
+        src: "/secondHero-new.jpg",
         alt: "Basketball team celebrating",
         title: "Game Day Ready",
         description: "Trusted by athletes",
