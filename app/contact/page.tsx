@@ -8,6 +8,7 @@ import { ChevronRight, Mail, Phone, MapPin } from 'lucide-react'
 import { Inter } from 'next/font/google'
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { Linkedin, Facebook, Instagram } from 'lucide-react';
 
 
 
@@ -156,7 +157,7 @@ export default function Contact() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        Instagram
+                                        <Instagram />
                                     </a>
                                     <a
                                         href="https://www.facebook.com/profile.php?id=61564086935491"
@@ -164,7 +165,7 @@ export default function Contact() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        Facebook
+                                        <Facebook />
                                     </a>
                                     <a
                                         href="https://www.linkedin.com/company/sportsuniformscanada"
@@ -172,7 +173,7 @@ export default function Contact() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >
-                                        Linkedin
+                                        <Linkedin />
                                     </a>
                                 </div>
                             </CardContent>
