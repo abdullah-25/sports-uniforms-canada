@@ -90,13 +90,13 @@ export default function ModernHeaderHero() {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 5000,
         fade: true,
         pauseOnHover: false
     }
 
     return (
-        <div className="relative">
+        <div className="relative overflow-x-hidden">
             <header
                 className={`fixed top-0 left-0 right-0 z-20 transition-all duration-300 ${isScrolled ? 'bg-black bg-opacity-90 py-2' : 'bg-transparent py-4'
                     }`}
@@ -104,7 +104,7 @@ export default function ModernHeaderHero() {
                 <nav className=" mx-auto px-6 py-2 flex justify-between items-center">
                     <Link href="/" className="text-2xl font-bold text-white">
                         <Image
-                            src='/logo-new.jpg'
+                            src='/logo.jpg'
                             alt="Sports Uniforms Canada"
                             width={90}
                             height={90}
