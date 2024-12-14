@@ -104,7 +104,7 @@ export default function ModernHeaderHero() {
                 <nav className=" mx-auto px-6 py-2 flex justify-between items-center">
                     <Link href="/" className="text-2xl font-bold text-white">
                         <Image
-                            src='/logo-hero.PNG'
+                            src='https://sportsuniformscanada.com/logo-hero.PNG'
                             alt="Sports Uniforms Canada"
                             width={90}
                             height={90}
