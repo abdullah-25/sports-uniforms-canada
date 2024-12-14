@@ -95,7 +95,7 @@ export default function ModernHeaderHero() {
                 className={`fixed top-0 left-0 right-0 z-20 transition-all duration-300 ${isScrolled ? 'bg-black bg-opacity-90 py-2' : 'bg-transparent py-4'
                     }`}
             >
-                <nav className=" mx-auto px-6 py-4 flex justify-between items-center">
+                <nav className=" mx-auto px-6 flex justify-between items-center">
                     <Link href="/" className="text-2xl font-bold text-white">
                         <Image
                             src='/logo.png'
