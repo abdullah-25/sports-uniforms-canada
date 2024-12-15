@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { config, subscribe } from '@fal-ai/serverless-client';
-import { GetColorName } from 'hex-color-to-color-name';
 
 config({
     credentials: process.env.FAL_KEY,

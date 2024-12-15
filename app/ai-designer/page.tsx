@@ -4,12 +4,9 @@
 import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { ChevronRight, Loader2, Download } from 'lucide-react'
+import { Loader2, Download } from 'lucide-react'
 import { Poppins } from 'next/font/google'
 import { useState } from 'react'
-import { Switch } from "@/components/ui/switch"
-import { Label } from "@/components/ui/label"
 import { motion } from 'framer-motion'
 import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
