@@ -7,7 +7,6 @@ import { Card, CardContent } from "@/components/ui/card"
 import { ChevronRight, ChevronLeft } from 'lucide-react'
 import { Poppins } from 'next/font/google'
 import { motion } from 'framer-motion'
-import ProductCarousel from '@/components/ui/product-carousel'
 import { useState } from 'react'
 
 
