@@ -28,8 +28,13 @@ export default function Gallery() {
         { id: 5, sport: 'soccer', year: '2024', title: 'Thunder FC', image: '/gallery/thunder.jpg' },
         { id: 6, sport: 'basketball', year: '2024', title: 'Chip Chaser', image: '/gallery/chipchaser.jpg' },
         { id: 7, sport: 'basketball', year: '2024', title: 'Dream Team', image: '/gallery/dreamteam.jpg' },
-        { id: 8, sport: 'basketball', year: '2024', title: 'Spidaa', image: '/gallery/spidaa.jpg' },
+        // { id: 8, sport: 'basketball', year: '2024', title: 'Spidaa', image: '/gallery/spidaa.jpg' },
         { id: 9, sport: 'basketball', year: '2024', title: 'Swishaz', image: '/gallery/Swishaz.jpg' },
+        { id: 10, sport: 'soccer', year: '2024', title: 'FSF', image: '/gallery/FSF.jpg' },
+        { id: 11, sport: 'basketball', year: '2024', title: 'Jelly Fam', image: '/gallery/jelly.jpg' },
+        { id: 12, sport: 'soccer', year: '2024', title: 'MAN-CHEST-HAIR', image: '/gallery/man.jpg' },
+        { id: 13, sport: 'soccer', year: '2024', title: 'Misfits', image: '/gallery/misfits.jpg' },
+        { id: 14, sport: 'basketball', year: '2024', title: 'MNL Basketball', image: '/gallery/mnl.jpg' },
     ]
 
     const filteredItems = galleryItems.filter(item =>
@@ -114,7 +119,7 @@ export default function Gallery() {
                                 <div className="relative">
                                     <Image
                                         src={item.image}
-                                        alt={item.title}
+                                        alt={''}
                                         width={400}
                                         height={300}
                                         className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"

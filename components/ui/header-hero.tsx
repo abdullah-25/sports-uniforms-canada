@@ -97,6 +97,7 @@ export default function ModernHeaderHero() {
 
     return (
         <div className="relative overflow-x-hidden">
+
             <header
                 className={`fixed top-0 left-0 right-0 z-20 transition-all duration-300 ${isScrolled ? 'bg-black bg-opacity-90 py-2' : 'bg-transparent py-4'
                     }`}
@@ -106,8 +107,8 @@ export default function ModernHeaderHero() {
                         <Image
                             src='/brand-new-logo.JPG'
                             alt="Sports Uniforms Canada"
-                            width={90}
-                            height={90}
+                            width={80}
+                            height={80}
                             className="w-[70px] h-[70px] md:w-[95px] md:h-[90px]"
                             priority
                         />

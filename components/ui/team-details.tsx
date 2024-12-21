@@ -73,7 +73,7 @@ export default function TeamDetails({ team }: TeamDetailsProps) {
                         <CardContent className="p-0">
                             <Image
                                 src={team.mainImage}
-                                alt={`${team.name} team photo`}
+                                alt={``}
                                 width={800}
                                 height={600}
                                 className="w-full h-[400px] md:h-[600px] object-cover rounded-lg"
