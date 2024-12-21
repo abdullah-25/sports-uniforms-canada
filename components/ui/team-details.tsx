@@ -83,11 +83,7 @@ export default function TeamDetails({ team }: TeamDetailsProps) {
                     </Card>
 
                     <Tabs defaultValue="gallery" className="mb-8">
-                        <TabsList className="grid w-full grid-cols-3 lg:w-[400px]">
-                            <TabsTrigger value="gallery">Gallery</TabsTrigger>
-                            <TabsTrigger value="uniforms">Uniforms</TabsTrigger>
-                            <TabsTrigger value="details">Details</TabsTrigger>
-                        </TabsList>
+
                         <TabsContent value="gallery">
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
                                 {team.gallery.map((image, index) => (
