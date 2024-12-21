@@ -38,7 +38,7 @@ export default function Gallery() {
     )
 
     return (
-        <div className={`flex pt-14 flex-col min-h-screen custom-bg relative ${poppins.className}`}>
+        <div className={`flex pt-5 flex-col min-h-screen custom-bg relative ${poppins.className}`}>
 
             <main className="flex-grow container mx-auto px-4 py-28">
                 <motion.h1

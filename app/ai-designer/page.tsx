@@ -124,7 +124,7 @@ export default function AIDesigner() {
 
 
     return (
-        <div className={` py-12 custom-bg relative flex flex-col min-h-screen ${poppins.className}`}>
+        <div className={` py-4 custom-bg relative flex flex-col min-h-screen ${poppins.className}`}>
 
 
             <main className="  relative flex-grow container mx-auto px-4 py-28">

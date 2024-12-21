@@ -110,7 +110,7 @@ export default function Products() {
             <main className="flex-grow container mx-auto px-4 py-28">
                 {/* <h1 className="text-4xl font-bold mb-8 text-center">Our Products</h1> */}
 
-                <div className="py-16">
+                <div className="py-8">
                     <div className="container mx-auto px-4">
                         <motion.h1
                             className="text-4xl font-bold text-center mb-8"
