@@ -25,7 +25,7 @@ const ImageCarouselSection = () => {
                 <div className="mb-8">
                     <Carousel
                         opts={{
-                            align: "start",
+                            // align: "start",
                             loop: true,
                         }}
                         className="w-full"
