@@ -12,7 +12,7 @@ export default function BasketballUniformsPage() {
     const products = [
         { name: 'basketball Kits', price: 45, src: '/our-products/basketball-1.jpg' },
         { name: 'Jerseys', price: 35, src: '/our-products/basketball-2.jpg' },
-        { name: 'Shorts', price: 15, src: '/our-products/basketball-3.jpg' },
+        { name: 'Shorts', price: 25, src: '/our-products/basketball-3.jpg' },
         // { name: 'Reversible Kit', price: 32, src: '/our-products/basketball-4.jpg' },
         // { name: 'Reversible Jerseys', price: 35, src: '/our-products/basketball-5.jpg' },
         // { name: 'Reversible Shorts', price: 15, src: '/our-products/basketball-6.jpg' },

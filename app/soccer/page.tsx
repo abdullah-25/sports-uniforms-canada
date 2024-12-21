@@ -13,7 +13,7 @@ export default function SoccerUniformsPage() {
     const products = [
         { name: 'Soccer Kits', price: 45, src: '/our-products/soccer-1.jpg' },
         { name: 'Jerseys', price: 35, src: '/our-products/soccer-2.jpg' },
-        { name: 'Shorts', price: 15, src: '/our-products/soccer-3.jpg' },
+        { name: 'Shorts', price: 25, src: '/our-products/soccer-3.jpg' },
 
     ]
 
