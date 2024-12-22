@@ -164,13 +164,15 @@ export default function Gallery() {
                     transition={{ delay: 0.3 }}
                 >
                     <h2 className="text-2xl font-semibold mb-4">Want to see your team in our gallery?</h2>
-                    <Button
-                        size="lg"
-                        className="bg-red-600 hover:bg-red-700 transition-colors duration-300"
-                    >
-                        Order Your Uniforms Now
-                        <ChevronRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    <Link href={`/contact`}>
+                        <Button
+                            size="lg"
+                            className="bg-red-600 hover:bg-red-700 transition-colors duration-300"
+                        >
+                            Order Your Uniforms Now
+                            <ChevronRight className="ml-2 h-4 w-4" />
+                        </Button>
+                    </Link>
                 </motion.div>
             </main>
         </div>
