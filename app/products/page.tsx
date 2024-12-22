@@ -97,7 +97,7 @@ export default function Products() {
         },
         {
             name: "Basketball Jerseys",
-            description: "Premium quality basketball uniforms that combine style with functionality. Perfect for teams looking to make a statement on the court. Our uniforms are designed with moisture-wicking technology.",
+            description: "Premium quality basketball uniforms that combine style with functionality. Perfect for teams looking to make a statement on the court. Truly best in the game.",
             image: "/products/basketball-display.jpg",
             link: "/basketball"
         }
@@ -261,7 +261,7 @@ export default function Products() {
                         </div>
                     </section>
                 </div>
-                <section className="mt-12 rounded-lg">
+                <section className="mt-12 rounded-lg ml-4">
                     <h2 className="text-2xl font-semibold mb-4">Custom Design Request</h2>
                     <p className="text-gray-700 mb-4">
                         Have a unique design in mind? We can bring your vision to life! Upload your design ideas or describe your requirements, and our team will work with you to create the perfect custom uniforms for your team.
