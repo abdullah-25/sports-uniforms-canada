@@ -171,9 +171,9 @@ export default function AboutUs() {
                 {/* FAQ Section */}
                 <section className="mb-20 ">
                     <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Frequently Asked Questions</h2>
-                    <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                    {/* <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
                         Find answers to common questions about our custom sports uniforms, ordering process, and more.
-                    </p>
+                    </p> */}
 
                     <div className="max-w-3xl mx-auto">
                         <div className="mb-8 relative">

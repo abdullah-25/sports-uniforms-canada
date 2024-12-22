@@ -97,7 +97,7 @@ export default function Products() {
         },
         {
             name: "Basketball Jerseys",
-            description: "Premium quality basketball uniforms that combine style with functionality. Perfect for teams looking to make a statement on the court.",
+            description: "Premium quality basketball uniforms that combine style with functionality. Perfect for teams looking to make a statement on the court. Our uniforms are designed with moisture-wicking technology.",
             image: "/products/basketball-display.jpg",
             link: "/basketball"
         }
@@ -109,7 +109,7 @@ export default function Products() {
             <main className="flex-grow container mx-auto px-4 py-28">
                 {/* <h1 className="text-4xl font-bold mb-8 text-center">Our Products</h1> */}
 
-                <div className="py-8">
+                <div className="">
                     <div className="container mx-auto px-4">
                         <motion.h1
                             className="text-4xl font-bold text-center mb-8"
@@ -218,7 +218,7 @@ export default function Products() {
                                                 className="flex-none w-full md:w-[calc(33.333%-16px)]"
                                             >
                                                 <CardContent className="p-4">
-                                                    <div className="aspect-[4/3] relative rounded-lg overflow-hidden mb-4">
+                                                    <div className="aspect-[2/3] relative rounded-lg overflow-hidden mb-4">
                                                         <Image
                                                             src={product.image}
                                                             alt={product.name}
