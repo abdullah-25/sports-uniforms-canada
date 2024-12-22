@@ -30,7 +30,7 @@ export default function Gallery() {
         { id: 7, sport: 'basketball', year: '2024', title: 'Dream Team', image: '/gallery/dreamteam.jpg' },
         // { id: 8, sport: 'basketball', year: '2024', title: 'Spidaa', image: '/gallery/spidaa.jpg' },
         { id: 9, sport: 'basketball', year: '2024', title: 'Swishaz', image: '/gallery/Swishaz.jpg' },
-        { id: 10, sport: 'soccer', year: '2024', title: 'FSF', image: '/gallery/FSF.jpg' },
+        { id: 10, sport: 'soccer', year: '2024', title: 'FSF FC', image: '/gallery/FSF.jpg' },
         { id: 11, sport: 'basketball', year: '2024', title: 'Jelly Fam', image: '/gallery/jelly.jpg' },
         { id: 12, sport: 'soccer', year: '2024', title: 'MAN-CHEST-HAIR', image: '/gallery/man.jpg' },
         { id: 13, sport: 'soccer', year: '2024', title: 'Misfits', image: '/gallery/misfits.jpg' },
