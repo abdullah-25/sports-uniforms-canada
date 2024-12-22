@@ -41,6 +41,7 @@ export default function Gallery() {
         { id: 18, sport: 'soccer', year: '2024', title: 'Taaqat', image: '/gallery/taaqat.jpg' },
         { id: 19, sport: 'soccer', year: '2024', title: 'United Futsal', image: '/gallery/united.jpg' },
         { id: 20, sport: 'soccer', year: '2024', title: 'Young Sirs', image: '/gallery/youngsirs.jpg' },
+        { id: 21, sport: 'basketball', year: '2024', title: 'Uncle Drew', image: '/gallery/uncle.jpg' },
 
     ]
 
