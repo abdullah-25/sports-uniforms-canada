@@ -32,12 +32,12 @@ const ImageCarouselSection = () => {
                     >
                         <CarouselContent className="-ml-2 md:-ml-4">
                             {[1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12].map((image) => (
-                                <CarouselItem key={image} className="pl-2 md:pl-4 basis-1/1 px-4 md:basis-1/2 lg:basis-1/4">
+                                <CarouselItem key={image} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/4">
                                     <motion.div
                                         initial={{ opacity: 0, scale: 0.9 }}
                                         whileInView={{ opacity: 1, scale: 1 }}
                                         transition={{ duration: 0.5, delay: image * 0.1 }}
-                                        className="relative group overflow-hidden rounded-lg h-[250px]"
+                                        className="relative group overflow-hidden rounded-lg h-[250px] mx-2 md:mx-0"
                                     >
                                         <Image
                                             src={`/gallery/games-${image}.jpg`}
