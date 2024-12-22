@@ -38,6 +38,10 @@ export default function Gallery() {
         { id: 15, sport: 'basketball', year: '2024', title: 'Bluff Goons', image: '/gallery/bluff.jpg' },
         { id: 16, sport: 'basketball', year: '2024', title: 'Average Joes', image: '/gallery/averagejoes.jpg' },
         { id: 17, sport: 'basketball', year: '2024', title: 'East End Eagles', image: '/gallery/eastendeagles.jpg' },
+        { id: 18, sport: 'soccer', year: '2024', title: 'Taaqat', image: '/gallery/taaqat.jpg' },
+        { id: 19, sport: 'soccer', year: '2024', title: 'United Futsal', image: '/gallery/united.jpg' },
+        { id: 20, sport: 'soccer', year: '2024', title: 'Young Sirs', image: '/gallery/youngsirs.jpg' },
+
     ]
 
     const filteredItems = galleryItems.filter(item =>
