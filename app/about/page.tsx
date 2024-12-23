@@ -120,20 +120,28 @@ export default function AboutUs() {
                         />
                     </div>
                     <div className="space-y-4">
-                        <h2 className="text-2xl font-semibold">Our Story</h2>
-                        <p className="text-gray-700 mb-4">
-                            At Sports Uniforms Canada, we started with a vision: to transform the way teams connect through custom sports apparel. What began as a small endeavor has grown into a trusted name for quality, creativity, and affordability in the sportswear industry.
-                        </p>
-                        <p className="text-gray-700 mb-4">
-                            Our roots are grounded in our love for sports and teamwork. Over the years, we've worked with diverse teams—from local recreational leagues to competitive clubs—delivering uniforms that combine functionality with striking designs.
-                        </p>
-                        <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
-                        <p className="text-gray-700 mb-4">
-                            Our mission is simple: to empower teams with exceptional sportswear that inspires confidence, fosters unity, and elevates performance.
-                        </p>
-                        <p className="text-gray-700">
-                            We are dedicated to providing high-quality, customizable uniforms at accessible prices without compromising on durability or design.
-                        </p>
+                        <Card>
+                            <CardContent className="p-6">
+                                <h2 className="text-2xl font-semibold mb-4">Our Story</h2>
+                                <p className="text-gray-700 mb-4">
+                                    At Sports Uniforms Canada, we started with a vision: to transform the way teams connect through custom sports apparel. What began as a small endeavor has grown into a trusted name for quality, creativity, and affordability in the sportswear industry.
+                                </p>
+                                <p className="text-gray-700 mb-4">
+                                    Our roots are grounded in our love for sports and teamwork. Over the years, we've worked with diverse teams—from local recreational leagues to competitive clubs—delivering uniforms that combine functionality with striking designs.
+                                </p>
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardContent className="p-6">
+                                <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
+                                <p className="text-gray-700 mb-4">
+                                    Our mission is simple: to empower teams with exceptional sportswear that inspires confidence, fosters unity, and elevates performance.
+                                </p>
+                                <p className="text-gray-700">
+                                    We are dedicated to providing high-quality, customizable uniforms at accessible prices without compromising on durability or design.
+                                </p>
+                            </CardContent>
+                        </Card>
 
                     </div>
 
