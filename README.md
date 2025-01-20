@@ -10,9 +10,19 @@ npm run dev
 yarn dev
 # or
 pnpm dev
+
 # or
 bun dev
 ```
+
+<img width="1666" alt="Screenshot 2025-01-20 at 12 57 16 PM" src="https://github.com/user-attachments/assets/2350bac9-b4eb-40e8-b707-249d7b6e9253" />
+
+
+
+https://github.com/user-attachments/assets/708bd2b6-2bd2-4926-938c-b675e661c5d5
+
+
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
